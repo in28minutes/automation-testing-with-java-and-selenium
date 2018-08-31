@@ -103,6 +103,12 @@
   driver = new ChromeDriver();
 ```
 
+###### Firefox Driver
+
+```java
+  FirefoxDriverManager.getInstance().setup();
+  driver = new FirefoxDriver();
+```
 
 #### Resources
 
@@ -123,11 +129,14 @@ selenium-standalone install
 ```
 
 ##### Selenium Grid
+
 - URL -http://localhost:4444/grid/console
+
 ```
 selenium-standalone start -- -role hub
 selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
 selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
+
 maxSessions, maxInstances
 ```
 
