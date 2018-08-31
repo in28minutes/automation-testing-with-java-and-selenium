@@ -1,0 +1,22 @@
+label {
+    font-size: 16px;
+    color: #111111;
+}
+
+input, textarea, select {
+    background-color: antiquewhite;
+}
+
+fieldset {
+    border: 0px;
+    padding: 20px;
+    background-color: #EEFFFF;
+}
+
+ul {
+    background-color: #EEFFEE;
+}
+
+li {
+    color: #666666;
+}

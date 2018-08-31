@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Learn Forms in HTML </title>
+    </head>
+    
+    <body>
+        Let's get some data from the user:
+        <ul>
+            <li>Text</li>
+            <li>Lot of Text - in multiple lines</li>
+            <li>Select among options</li>
+            <li>Yes or No</li>
+            <li>Click a Button</li>
+        </ul>
+
+        <form method="post" action="accept-information.do">
+            <label>First Name</label>
+            <input type="text" name="first-name" size="15" maxlength="20" value="Ranga"/>
+            
+            <label>Password</label>
+            <input type="password" name="password"/>
+            
+            <label>Upload Profile Picture</label>
+            <input type="file" name="profile-picture"/>
+            
+            
+            <label>Age</label>
+            <input type="number" name="age" value="20"/>
+            <label>Describe Yourselves</label>
+            <textarea name="description" rows="5" cols="100"></textarea>
+            <br/>
+            <label>What do you want to learn?</label>
+            <input type="radio" name="what-to-learn" value="HTML">HTML
+            <input type="radio" name="what-to-learn" value="CSS" checked>CSS
+            <input type="radio" name="what-to-learn" value="AUT">Automation Testing
+            <input type="radio" name="what-to-learn" value="JAVA">Java
+            <BR/>
+            <label>How do you want to Learn?</label>
+            
+            <select name="how-to-learn" multiple>
+                <option value="online">Online</option>
+                <option value="books">Books</option>
+                <option value="college" selected>College</option>
+                <option value="other">Other</option>
+            </select>
+            <BR/>
+            <input type="checkbox" name="drive" checked/>
+            <label>Do You Know to Drive?</label>
+            
+            <input type="submit"/>
+        </form>
+        
+        
+    </body>
+</html>

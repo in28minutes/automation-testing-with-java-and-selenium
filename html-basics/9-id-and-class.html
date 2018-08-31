@@ -1,0 +1,158 @@
+<html>
+    <head>
+        
+        <title>ID and Class in CSS</title>
+        
+        <!-- CSS Selectors -->
+        <style type="text/css">
+            p {
+                color : brown;
+            }
+            
+            div p {
+                color : royalblue;
+            }
+         
+            h2 {
+                color : green;
+            }
+            
+            p .second-paragraph {
+                color:red;
+            }
+
+            .first-paragraph {
+                color:orange;
+            }
+            
+            .important-thing {
+                background-color: yellow;
+            }
+            
+            #html-important-point{
+                background-color: #EEEEEE;
+            }
+            
+            #important-point-outside-div{
+                background-color: bisque;
+            }
+
+        </style>
+        
+        <!-- 
+
+        CSS Selectors
+        ~~~~~~~~~~~~~
+
+        $$("p")
+        (10) [p, p.first-paragraph.important-thing, p.second-paragraph, p#html-important-point, p#important-point-outside-div, p, p.first-paragraph, p.second-paragraph, p.first-paragraph, p.second-paragraph]
+        
+        $$("div p")
+        (8) [p.first-paragraph.important-thing, p.second-paragraph, p#html-important-point, p, p.first-paragraph, p.second-paragraph, p.first-paragraph, p.second-paragraph]
+        
+        $$(".first-paragraph")
+        (3) [p.first-paragraph.important-thing, p.first-paragraph, p.first-paragraph]
+        
+        $$(".second-paragraph")
+        (4) [h1.second-paragraph, p.second-paragraph, p.second-paragraph, p.second-paragraph]
+        
+        $$("p .second-paragraph")
+        []
+        
+        $$("p.second-paragraph")
+        (3) [p.second-paragraph, p.second-paragraph, p.second-paragraph]
+        
+        $$("h2")
+        (3) [h2, h2, h2]
+        
+        $$("h1")
+        [h1.second-paragraph]0: h1.second-paragraphlength: 1__proto__: Array(0)
+        
+        $$("#html-important-point")
+        [p#html-important-point]
+
+        XPATH Selectors
+        ~~~~~~~~~~~~~~~
+        $$("p")
+        (10) [p, p.first-paragraph.important-thing, p.second-paragraph, p#html-important-point, p#important-point-outside-div, p, p.first-paragraph, p.second-paragraph, p.first-paragraph, p.second-paragraph]
+
+        $$("h1")
+        [h1.second-paragraph]
+
+        $x("h1")
+        []
+
+        $x("/html/body/h1")
+        [h1.second-paragraph]
+
+        $x("//h1")
+        [h1.second-paragraph]
+
+        $x("//p")
+        (10) [p, p.first-paragraph.important-thing, p.second-paragraph, p#html-important-point, p#important-point-outside-div, p, p.first-paragraph, p.second-paragraph, p.first-paragraph, p.second-paragraph]
+
+        $x("//h2")
+        (3) [h2, h2, h2]
+
+        $x("//h2[1]")
+        [h2]
+
+        $x("//h2[2]")
+        [h2]
+
+        $x("//h2[last()]")
+        [h2]
+
+        $x("//p")
+        (10) [p, p.first-paragraph.important-thing, p.second-paragraph, p#html-important-point, p#important-point-outside-div, p, p.first-paragraph, p.second-paragraph, p.first-paragraph, p.second-paragraph]
+
+        $x("//p[@id='html-important-point']")
+        [p#html-important-point]0: p#html-important-pointlength: 1__proto__: Array(0)
+
+        $$("#html-important-point")
+        [p#html-important-point]
+
+        $x("//p[@class='first-paragraph']")
+        (2) [p.first-paragraph, p.first-paragraph]
+
+        $$(".first-paragraph")
+        (3) [p.first-paragraph.important-thing, p.first-paragraph, p.first-paragraph]
+
+        body
+        /html/body //body
+        /html/body/h1 //h1
+        body > h1
+        body > p:nth-child(2)
+
+
+        -->
+    </head>
+    
+    <body>
+        <h1 class="second-paragraph">Learn Automation Testing</h1>
+        <p>Main Paragraph</p>
+        
+        <h2>HTML and CSS</h2>
+        <div>
+            <p class="first-paragraph important-thing">First Paragraph</p>
+            <p class="second-paragraph">Second Paragraph</p>
+            <p id="html-important-point">An important point about HTML</p>
+        </div>
+        
+        <p id="important-point-outside-div">Paragraph outside div</p>
+        
+        <div><p>Paragraph inside div</p></div>
+        
+        <h2>Language</h2>
+        <div>
+            <p class="first-paragraph">First Paragraph</p>
+            <p class="second-paragraph">Second Paragraph</p>
+        </div>
+        
+        <h2>Selenium</h2>
+        <div>
+            <p class="first-paragraph">First Paragraph</p>
+            <p class="second-paragraph">Second Paragraph</p>
+        </div>
+    </body>
+</html>

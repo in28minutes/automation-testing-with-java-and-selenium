@@ -1,0 +1,164 @@
+<html>
+    <head>
+        
+        <title>Learn Forms in HTML with CSS</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <!--
+        
+        CSS Selectors
+        ~~~~~~~~~~~~~~~
+        $$("input")
+        (10) [input#first-name, input#password, input, input, input, input, input, input, input, input]0: input#first-name1: input#password2: input3: input4: input5: input6: input7: input8: input9: inputlength: 10__proto__: Array(0)
+
+        $$("input[type='password']")
+        [input#password]0: input#passwordlength: 1__proto__: Array(0)
+
+        $$("input[type='text']")
+        [input#first-name]0: input#first-namelength: 1__proto__: Array(0)
+
+        $$("input[type='number']")
+        [input]
+
+        $$("input[type='radio']")
+        (4) [input, input, input, input]0: input1: input2: input3: inputlength: 4__proto__: Array(0)
+
+        $$("input[value='HTML']")
+        [input]0: inputlength: 1__proto__: Array(0)
+
+        $$("label")
+        (8) [label, label, label#update-profile-label, label, label, label, label, label]
+
+        $$("li")
+        (5) [li, li, li, li, li]
+
+        $$("select")
+        [select]
+
+        $$("option")
+        (4) [option, option, option, option]0: 
+
+        $$("input[type='checkbox']")
+        [input]
+
+
+        XPath Selectors
+        ~~~~~~~~~~~~~~~
+
+        $x("//input")
+        (10) [input#first-name, input#password, input, input, input, input, input, input, input, input]
+
+        $x("//input[@type='text']")
+        [input#first-name]
+
+        $x("//input[@type='checkbox']")
+        [input]
+
+        $x("//input[@type='password']")
+        [input#password]
+
+        $x("//input[@id='password']")
+        [input#password]
+
+        $x("//input[@id='first-name']")
+        [input#first-name]
+
+        $x("//label")
+        (8) [label, label, label#update-profile-label, label, label, label, label, label]
+
+        $x("//textarea")
+        [textarea]
+
+        $x("//input[type='number']")
+        []
+
+        $x("//input[@type='number']")
+        [input]0: inputlength: 1__proto__: Array(0)
+
+        $x("//input[@type='radio']")
+        (4) [input, input, input, input]
+
+        $x("//select")
+        [select]
+
+        $x("//option")
+        (4) [option, option, option, option]
+
+        $x("//*[@id='first-name']")
+        [input#first-name]
+
+        $$("#first-name")
+        [input#first-name]
+
+        $x("//input[@type='radio']")
+        (4) [input, input, input, input]
+        -->
+        
+    </head>
+    
+    <body>
+        Let's get some data from the user:
+        
+        <ul>
+            <li>Text</li>
+            <li>Lot of Text - in multiple lines</li>
+            <li>Select among options</li>
+            <li>Yes or No</li>
+            <li>Click a Button</li>
+        </ul>
+
+        <form method="post" action="accept-information.do">
+            
+            <fieldset>
+                <label >First Name</label>
+                <input type="text" name="first-name"  id="first-name" size="15" maxlength="20" value="Ranga"/>
+
+                <label>Password</label>
+                <input type="password"  id="password" name="password"/>            
+            </fieldset>
+            <!--style="font-size: 25px"-->
+            
+            <fieldset>
+                <label id="update-profile-label">Upload Profile Picture</label>
+                <input type="file" name="profile-picture"/>
+            </fieldset>
+            
+            <fieldset>
+                <label>Age</label>
+                <input type="number" name="age" value="20"/>
+                <label>Describe Yourselves</label>
+                <textarea name="description" rows="5" cols="100"></textarea>
+            </fieldset>
+        
+            <fieldset>
+                <label>What do you want to learn?</label>
+                <input type="radio" name="what-to-learn" value="HTML">HTML
+                <input type="radio" name="what-to-learn" value="CSS" checked>CSS
+                <input type="radio" name="what-to-learn" value="AUT">Automation Testing
+                <input type="radio" name="what-to-learn" value="JAVA">Java
+            </fieldset>
+                
+            <fieldset>
+            <label>How do you want to Learn?</label>
+            <select name="how-to-learn" multiple>
+                <option value="online">Online</option>
+                <option value="books">Books</option>
+                <option value="college" selected>College</option>
+                <option value="other">Other</option>
+            </select>
+            </fieldset>
+            
+            <fieldset>
+                <input type="checkbox" name="drive" checked/>
+                <label>Do You Know to Drive?</label>
+            </fieldset>
+            
+            <fieldset>
+                <input type="submit" />
+            </fieldset>
+        </form>
+        
+        
+    </body>
+</html>
