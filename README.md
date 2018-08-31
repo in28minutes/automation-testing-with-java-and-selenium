@@ -13,6 +13,12 @@
   - [Find Us](#useful-links)
   - [Other Courses](#other-courses)
 
+## Overview
+- Tools : Maven, JUnit, TestNG (XML Test Suite, Groups, Listeners, Parallel, Multiple Browsers)
+- Concepts : HTML, DOM, XPath, Selenium Architecture, Reporting (HTML), Parallel Execution (Data Driven Tests, Browsers, Test Ng, Grid), Debugging (Screenshots/logs), Page Object Model, Data Driven(Excel), Keyword Driven, Record and Replay, Selenium Grid, Cross Browser Testing, DRY
+- Basics : Selenium IDE, Selenium Web Driver, Locating Web Elements(link text, name, id, xpath, css), Different Elements(select, radio, web tables, drag and drop, javascript alerts, windows, popups, iframes, switching windows, AJAX calls), Wait (Explicit(2types)/Implicit), JavaScript Executor Action Class, Mouse movement, Keyboard with Selenium, File Downloads)
+- Tips : Selenium Web Driver is an Interface, Test Retry, Headless Testing(PhantomJS, Chrome)
+
 ## Course Checklist
 
 ## Getting Started
@@ -42,18 +48,54 @@
 
 #### Resources
 
+##### Selenium
+
+- NPM - https://www.npmjs.com/package/selenium-standalone
+- Standalone Server 
+      - Manual Installation - https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers
+      - Automated Installation - http://webdriver.io/guide/getstarted/install.html
+      - URL - http://localhost:4444/wd/hub
+
+```
+sudo npm install selenium-standalone@latest -g
+
+In Windows, Run as Administrator
+
+sudo selenium-standalone install
+selenium-standalone start
+
+selenium-standalone install
+```
+
+- Selenium Grid
+    - http://localhost:4444/grid/console
+
+```
+selenium-standalone start -- -role hub
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
+```
+maxSessions, maxInstances
+
+
 ##### Plugins
 - Eclipse Plugin for TestNg - http://beust.com/eclipse
-
-##### Troubleshooting
-- Troubleshooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
-- Troubleshooting Guide for Maven Issues - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#error---you-are-not-using-a-jdk
 
 ##### Selenium IDE
 - Selenium IDE will no longer work from Firefox 55
    - https://seleniumhq.wordpress.com/2017/08/09/firefox-55-and-selenium-ide/
 - A new version of Selenium IDE for Selenium 3 is being built
    - https://seleniumhq.wordpress.com/2018/08/06/selenium-ide-tng/
+
+##### Troubleshooting
+- Troubleshooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
+- Troubleshooting Guide for Maven Issues - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#error---you-are-not-using-a-jdk
+
+##### Browsers
+- WebDriver Specification - https://www.w3.org/TR/webdriver/
+- Firefox version 47.0+ Geckodriver is needed to interact with Firefox - Similar to Chrome.
+- https://ftp.mozilla.org/pub/firefox/releases/61.0.1/
+- https://ftp.mozilla.org/pub/firefox/releases/54.0.1/
 
 
 #### Maven Dependencies
@@ -353,3 +395,166 @@ http://eepurl.com/bOJulL
 - [Facebook](http://facebook.com/in28minutes)
 - [Twitter](http://twitter.com/in28minutes)
 - [Google Plus](https://plus.google.com/u/3/110861829188024231119)
+
+ ### Graphviz
+ 
+ ```
+ digraph G {
+  color="#1BA84A";//green
+  color="#D14D28";//orange
+  color="#59C8DE";//blue
+
+  node[style=filled,color="#59C8DE"]
+  
+  subgraph cluster_0 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    Code[label=<Automation Code + Libraries<BR />
+    <FONT POINT-SIZE="10">Java, Python etc</FONT>>];
+    WebDriver[label=<Web Driver<BR />
+    <FONT POINT-SIZE="10">Chrome Driver, Firefox Driver,<BR /> Safari Driver, IE Driver etc</FONT>>];
+    Browser[label=<Browser<BR />
+        <FONT POINT-SIZE="10">Chrome, Firefox, Safari, IE etc</FONT>>];
+    Code -> WebDriver -> Browser;
+    label = "Single    System";
+  }
+    
+  RunTests[label=<Run Automation Tests<BR />
+        <FONT POINT-SIZE="10">Manually, Continuous Integration etc</FONT>>];
+  Application[label=<Web Application<BR />
+        <FONT POINT-SIZE="10">Todo Management, Google, Facebook etc</FONT>>];
+
+  RunTests -> Code;
+  Browser -> Application;
+
+  RunTests [shape=Mdiamond];
+  Application [shape=rectangle];
+
+}
+
+digraph SeleniumStandAlone {
+  color="#1BA84A";//green
+  color="#D14D28";//orange
+  color="#59C8DE";//blue
+
+  node[style=filled,color="#59C8DE"]
+  
+      subgraph cluster_2 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    WebDriver[label=<Web Driver<BR />
+    <FONT POINT-SIZE="10">Chrome Driver, Firefox Driver,<BR /> Safari Driver, IE Driver etc</FONT>>];
+    Browser[label=<Browser<BR />
+        <FONT POINT-SIZE="10">Chrome, Firefox, Safari, IE etc</FONT>>];
+    StandaloneServer[];
+    StandaloneServer -> WebDriver -> Browser;
+    label = "Stand Alone Server";
+  }
+
+  subgraph cluster_0 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    Code[label=<Automation Code + Libraries<BR />
+    <FONT POINT-SIZE="10">Java, Python etc</FONT>>];
+    Code -> StandaloneServer
+    label = "System 1";
+  }
+    
+  subgraph cluster_1 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    Code1[label=<Automation Code + Libraries<BR />
+    <FONT POINT-SIZE="10">Java, Python etc</FONT>>];
+    Code1 -> StandaloneServer
+    label = "System 2";
+  }
+
+ 
+  Application[label=<Web Application<BR />
+        <FONT POINT-SIZE="10">Todo Management, Google, Facebook etc</FONT>>];
+
+  
+  Browser -> Application;
+
+  Application [shape=rectangle];
+
+}
+
+digraph SeleniumGrid {
+  color="#1BA84A";//green
+  color="#D14D28";//orange
+  color="#59C8DE";//blue
+
+
+  node[style=filled,color="#59C8DE"]
+  
+        subgraph cluster_3 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    WebDriver[label=<Web Driver<BR />
+    <FONT POINT-SIZE="10">Chrome Driver, Firefox Driver,<BR /> Safari Driver, IE Driver etc</FONT>>];
+    Browser[label=<Browser<BR />
+        <FONT POINT-SIZE="10">Chrome, Firefox, Safari, IE etc</FONT>>];
+    SeleniumNode1[label="Selenium Node"];
+    SeleniumNode1 -> WebDriver -> Browser;
+    label = "Selenium Node 1";
+  }
+
+      subgraph cluster_4 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    WebDriver2[label=<Web Driver<BR />
+    <FONT POINT-SIZE="10">Chrome Driver, Firefox Driver,<BR /> Safari Driver, IE Driver etc</FONT>>];
+    Browser2[label=<Browser<BR />
+        <FONT POINT-SIZE="10">Chrome, Firefox, Safari, IE etc</FONT>>];
+    SeleniumNode2[label="Selenium Node"];
+    SeleniumNode2 -> WebDriver2 -> Browser2;
+    label = "Selenium Node 2";
+  }
+  
+
+      subgraph cluster_2 {
+    style=filled;
+    color="#59C8DE";
+    
+    node [style=filled,color="#D14D28", fontcolor=white];
+    WebDriver[label=<Web Driver<BR />
+    <FONT POINT-SIZE="10">Chrome Driver, Firefox Driver,<BR /> Safari Driver, IE Driver etc</FONT>>];
+    Browser[label=<Browser<BR />
+        <FONT POINT-SIZE="10">Chrome, Firefox, Safari, IE etc</FONT>>];
+        
+    SeleniumGrid -> SeleniumNode1;
+    SeleniumGrid -> SeleniumNode2;
+    label = "Selenium Grid";
+  }
+
+
+    
+  Application[label=<Web Application<BR />
+        <FONT POINT-SIZE="10">Todo Management, Google, Facebook etc</FONT>>];
+
+  AutomationCode[label=<Automation Code + Libraries<BR />
+        <FONT POINT-SIZE="10">Java, Python etc, Application 1..n etc, System 1..n etc </FONT>>];
+  
+  AutomationCode -> SeleniumGrid;
+  Browser -> Application;
+  Browser2 -> Application;
+
+  Application [shape=rectangle];
+  AutomationCode [shape=Mdiamond];
+}
+
+
+```
