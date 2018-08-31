@@ -50,6 +50,8 @@
 
 ##### Maven Dependencies
 
+###### JUnit
+
 ```xml
   <dependencies>
   
@@ -93,6 +95,8 @@
 ```
 
 ##### Java Code
+
+###### Chrome Driver
 
 ```java
   ChromeDriverManager.getInstance().setup();
