@@ -41,8 +41,19 @@
 ### References
 
 #### Resources
+
+##### Plugins
+- Eclipse Plugin for TestNg - http://beust.com/eclipse
+
+##### Troubleshooting
 - Troubleshooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
 - Troubleshooting Guide for Maven Issues - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#error---you-are-not-using-a-jdk
+
+##### Selenium IDE
+- Selenium IDE will no longer work from Firefox 55
+   - https://seleniumhq.wordpress.com/2017/08/09/firefox-55-and-selenium-ide/
+- A new version of Selenium IDE for Selenium 3 is being built
+   - https://seleniumhq.wordpress.com/2018/08/06/selenium-ide-tng/
 
 
 #### Maven Dependencies
@@ -101,6 +112,8 @@
 ### Introduction
 
 Writing your first automation test is a lot of fun.
+
+Selenium can be used for screen scraping and automating repeated tasks on browser.
 
 Introduction to XYZ Framework..
 
