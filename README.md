@@ -46,59 +46,9 @@
 
 ### References
 
-#### Resources
+#### Code Snippets
 
-##### Selenium
-
-- NPM - https://www.npmjs.com/package/selenium-standalone
-- Standalone Server 
-      - Manual Installation - https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers
-      - Automated Installation - http://webdriver.io/guide/getstarted/install.html
-      - URL - http://localhost:4444/wd/hub
-
-```
-sudo npm install selenium-standalone@latest -g
-
-In Windows, Run as Administrator
-
-sudo selenium-standalone install
-selenium-standalone start
-
-selenium-standalone install
-```
-
-- Selenium Grid
-    - http://localhost:4444/grid/console
-
-```
-selenium-standalone start -- -role hub
-selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
-selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
-```
-maxSessions, maxInstances
-
-
-##### Plugins
-- Eclipse Plugin for TestNg - http://beust.com/eclipse
-
-##### Selenium IDE
-- Selenium IDE will no longer work from Firefox 55
-   - https://seleniumhq.wordpress.com/2017/08/09/firefox-55-and-selenium-ide/
-- A new version of Selenium IDE for Selenium 3 is being built
-   - https://seleniumhq.wordpress.com/2018/08/06/selenium-ide-tng/
-
-##### Troubleshooting
-- Troubleshooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
-- Troubleshooting Guide for Maven Issues - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#error---you-are-not-using-a-jdk
-
-##### Browsers
-- WebDriver Specification - https://www.w3.org/TR/webdriver/
-- Firefox version 47.0+ Geckodriver is needed to interact with Firefox - Similar to Chrome.
-- https://ftp.mozilla.org/pub/firefox/releases/61.0.1/
-- https://ftp.mozilla.org/pub/firefox/releases/54.0.1/
-
-
-#### Maven Dependencies
+##### Maven Dependencies
 
 ```xml
   <dependencies>
@@ -142,12 +92,61 @@ maxSessions, maxInstances
   </dependencies>
 ```
 
-#### Java Code
+##### Java Code
 
 ```java
   ChromeDriverManager.getInstance().setup();
   driver = new ChromeDriver();
 ```
+
+
+#### Resources
+
+##### Selenium Standalone
+- Manual Installation - https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers
+- Automated Installation - http://webdriver.io/guide/getstarted/install.html
+- NPM - https://www.npmjs.com/package/selenium-standalone
+- URL - http://localhost:4444/wd/hub
+
+```
+sudo npm install selenium-standalone@latest -g
+In Windows, Run as Administrator
+
+sudo selenium-standalone install
+selenium-standalone start
+
+selenium-standalone install
+```
+
+##### Selenium Grid
+- URL -http://localhost:4444/grid/console
+```
+selenium-standalone start -- -role hub
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
+maxSessions, maxInstances
+```
+
+##### Plugins
+- Eclipse Plugin for TestNg - http://beust.com/eclipse
+
+##### Selenium IDE
+- Selenium IDE will no longer work from Firefox 55
+   - https://seleniumhq.wordpress.com/2017/08/09/firefox-55-and-selenium-ide/
+- A new version of Selenium IDE for Selenium 3 is being built
+   - https://seleniumhq.wordpress.com/2018/08/06/selenium-ide-tng/
+
+##### Troubleshooting
+- Troubleshooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
+- Troubleshooting Guide for Maven Issues - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ#error---you-are-not-using-a-jdk
+
+##### Browsers
+- WebDriver Specification - https://www.w3.org/TR/webdriver/
+- Firefox version 47.0+ Geckodriver is needed to interact with Firefox - Similar to Chrome.
+- https://ftp.mozilla.org/pub/firefox/releases/61.0.1/
+- https://ftp.mozilla.org/pub/firefox/releases/54.0.1/
+
+
 
 ## Overview
 
