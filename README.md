@@ -175,6 +175,14 @@
   driver = new FirefoxDriver();
 ```
 
+##### TestNG
+
+```
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First Suite" verbose="1">
+</suite>
+```
+
 #### Resources
 
 ##### Selenium Standalone
@@ -633,5 +641,331 @@ digraph SeleniumGrid {
   AutomationCode [shape=Mdiamond];
 }
 
+
+```
+
+### Backup
+
+#### JUnit + Selenium - Google Export from Katalon
+
+```
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class GoogleSearchForIn28minutes {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @Before
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://www.katalon.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testGoogleSearchForIn28minutes() throws Exception {
+    driver.get("https://www.google.com/");
+    driver.findElement(By.id("lst-ib")).click();
+    driver.findElement(By.id("lst-ib")).clear();
+    driver.findElement(By.id("lst-ib")).sendKeys("in28minutes");
+    driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
+```
+
+#### JUnit + Selenium - Facebook Export from Katalon
+
+```
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class FacebookLogin {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @Before
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://www.katalon.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testFacebookLogin() throws Exception {
+    driver.get("https://www.facebook.com/");
+    driver.findElement(By.id("email")).click();
+    driver.findElement(By.id("email")).clear();
+    driver.findElement(By.id("email")).sendKeys("in28minutes");
+    driver.findElement(By.id("pass")).clear();
+    driver.findElement(By.id("pass")).sendKeys("dummy");
+    driver.findElement(By.id("pass")).sendKeys(Keys.ENTER);
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
+
+```
+
+#### TestNg + Selenium - Google Export from Katalon
+
+```
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class GoogleSearchForIn28minutes {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @BeforeClass(alwaysRun = true)
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://www.katalon.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testGoogleSearchForIn28minutes() throws Exception {
+    driver.get("https://www.google.com/");
+    driver.findElement(By.id("lst-ib")).click();
+    driver.findElement(By.id("lst-ib")).clear();
+    driver.findElement(By.id("lst-ib")).sendKeys("in28minutes");
+    driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
+  }
+
+  @AfterClass(alwaysRun = true)
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
+```
+
+#### TestNg + Selenium - Facebook Export from Katalon
+
+```
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class FacebookLogin {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @BeforeClass(alwaysRun = true)
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "https://www.katalon.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testFacebookLogin() throws Exception {
+    driver.get("https://www.facebook.com/");
+    driver.findElement(By.id("email")).click();
+    driver.findElement(By.id("email")).clear();
+    driver.findElement(By.id("email")).sendKeys("in28minutes");
+    driver.findElement(By.id("pass")).clear();
+    driver.findElement(By.id("pass")).sendKeys("dummy");
+    driver.findElement(By.id("pass")).sendKeys(Keys.ENTER);
+  }
+
+  @AfterClass(alwaysRun = true)
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
 
 ```
