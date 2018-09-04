@@ -1,3 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="First Suite" verbose="1">
+	<test name="Default" parallel="true">
+		<packages>
+			<package name="com.example.tests.*"></package>
+		</packages>
+	</test>
+	<test name="BrowserSpecificTests" parallel="true">
+		<classes>
+			<class name="com.in28minutes.tests.TestsWithParameters">
+				<parameter name="browser" value="Chrome"></parameter>
+			</class>
+		</classes>
+	</test>
 </suite>
