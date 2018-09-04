@@ -1,0 +1,130 @@
+{
+  "id": "b68431ba-b034-4fe4-9aae-642e7e125b86",
+  "version": "1.1",
+  "name": "FirstSeleniumIDEProject",
+  "url": "https://www.facebook.com",
+  "tests": [{
+    "id": "501eba09-6bb7-473b-8b75-3ba0375da662",
+    "name": "Google-in28Minutes",
+    "commands": [{
+      "id": "fe578a69-6464-43d4-bf03-13beaf5ae174",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09921d10-0378-4403-9adf-b60a6cf78bd7",
+      "comment": "",
+      "command": "type",
+      "target": "id=lst-ib",
+      "targets": [
+        ["id=lst-ib", "id"],
+        ["name=q", "name"],
+        ["css=#lst-ib", "css"],
+        ["xpath=//input[@id='lst-ib']", "xpath:attributes"],
+        ["xpath=//div[@id='gs_lc0']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "in28minutes"
+    }, {
+      "id": "9a480dfd-7122-41e8-ab12-8d0741347bc1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=lst-ib",
+      "targets": [
+        ["id=lst-ib", "id"],
+        ["name=q", "name"],
+        ["css=#lst-ib", "css"],
+        ["xpath=//input[@id='lst-ib']", "xpath:attributes"],
+        ["xpath=//div[@id='gs_lc0']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "7e5ae9a2-a9ac-4052-966e-44861e749234",
+    "name": "Facebook-Login",
+    "commands": [{
+      "id": "056bdd8f-347a-4821-bd3d-3607171f2a4d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4339b0fa-9838-43c5-b8f1-a5fcae955d8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97396749-9c7b-4dd7-9b7f-72244c540436",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "in28minutes"
+    }, {
+      "id": "de136d4b-9413-4927-a6a8-ca73662040ad",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "dummy"
+    }, {
+      "id": "322a31f4-29fc-4fd2-b6ee-b81345065ba8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='login_form']/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "ca75afe8-8387-45fb-9e08-726c8d7e47cb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["501eba09-6bb7-473b-8b75-3ba0375da662", "7e5ae9a2-a9ac-4052-966e-44861e749234"]
+  }, {
+    "id": "55604727-eef4-4e91-8dd2-6955d4a8ae7f",
+    "name": "Suite1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7e5ae9a2-a9ac-4052-966e-44861e749234"]
+  }],
+  "urls": ["https://www.google.com/", "https://www.facebook.com/"],
+  "plugins": []
+}
