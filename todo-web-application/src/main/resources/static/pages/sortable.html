@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>sortable demo</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+
+#sortable {
+	list-style-type: none;
+	width: 25%;
+}
+
+#sortable li {
+	margin: 10px;
+	padding: 1em;
+	background: #59C8DE;
+	color: #D14D28;
+}
+
+</style>
+</head>
+<body>
+
+	<h1>Play with these</h1>
+	<ul id="sortable" class="ui-sortable">
+		<li id="html">HTML</li>
+		<li id="css">CSS</li>
+		<li id="jquery">JQuery</li>
+		<li id="xpath">XPath</li>
+		<li id="selenium">Selenium</li>
+		<li id="java">Java</li>
+		<li id="design">Design</li>
+		<li id="framework">Framework</li>
+	</ul>
+
+	<script>
+		$("#sortable").sortable();
+	</script>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="First Suite" verbose="1">
-	<!--  
-	<test name="com-example-tests">
+<suite name="First Suite" verbose="1" thread-count="5">
+	
+	<test name="com-example-tests" parallel="true">
 		<packages>
 			<package name="com.example.tests.*"></package>
 		</packages>
-	</test>-->
+	</test>
 	
 	<test name="ChromeSpecificTests">
 		<classes>
