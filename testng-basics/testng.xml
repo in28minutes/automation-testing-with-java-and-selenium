@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First Suite" verbose="1" thread-count="5">
+	
+	<test name="com-example-tests" parallel="true">
+		<packages>
+			<package name="com.example.tests.*"></package>
+		</packages>
+	</test>
+	
+	<test name="ChromeSpecificTests">
+		<classes>
+			<class name="com.in28minutes.test.testng.MultipleBrowserTest">
+				<parameter name="browser" value="Chrome"></parameter>
+			</class>
+		</classes>
+	</test>
+
+	<test name="FirefoxSpecificTests">
+		<classes>
+			<class name="com.in28minutes.test.testng.MultipleBrowserTest">
+				<parameter name="browser" value="Firefox"></parameter>
+			</class>
+		</classes>
+	</test>
+
+</suite>
