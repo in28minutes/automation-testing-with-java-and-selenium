@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class WebDriverBasicsLocatorsWithXPathSelectorTest extends AbstractChromeWebDriverTest{
 	
 	@Test
-	public void testXpathSelectorForaTableTd() {	
+	public void testXpathSelectorForaTableTd() {
 		driver.get("http://localhost:8080/pages/tables.html");
 		//$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
 		WebElement browserRow1 = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
