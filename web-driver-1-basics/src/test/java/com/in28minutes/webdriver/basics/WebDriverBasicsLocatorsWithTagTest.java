@@ -49,18 +49,4 @@ public class WebDriverBasicsLocatorsWithTagTest extends AbstractChromeWebDriverT
 		  sleep(3);
 	  }
   }
-
-  
-  @Test
-  public void findAllLinks() {
-	  driver.get("http://localhost:8080/pages/buttons.html");
-	  
-	  List<WebElement> elements = driver.findElements(By.className("btn"));
-	  
-	  for(WebElement element:elements) {
-		  System.out.println(element.getText());
-		  System.out.println(element.getAttribute("class"));
-	  }
-  }
-
 }
