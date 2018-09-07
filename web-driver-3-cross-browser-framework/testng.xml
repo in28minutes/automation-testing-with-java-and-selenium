@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First Suite" verbose="1">
+	<test name="FirefoxTests">
+		<parameter name="browser" value="firefox"/>
+		<packages>
+			<package name="com.in28minutes.selenium.crossbrowser.framework.*"/>
+		</packages>
+	</test>
+	<test name="ChromeTests">
+		<parameter name="browser" value="chrome"/>
+		<packages>
+			<package name="com.in28minutes.selenium.crossbrowser.framework.*"/>
+		</packages>
+	</test>
+
+</suite>
