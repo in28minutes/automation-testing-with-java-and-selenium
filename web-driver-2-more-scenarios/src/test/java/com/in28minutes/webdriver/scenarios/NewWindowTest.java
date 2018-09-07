@@ -91,4 +91,23 @@ public class NewWindowTest extends AbstractChromeWebDriverTest {
 		System.out.println(driver.getCurrentUrl());//http://localhost:8080/pages/forms.html
 	}
 
+	@Test
+	public void testForWindows2dummy() {
+		
+		driver.get("http://localhost:8080/pages/frames-example.html");
+
+		System.out.println("0 - " + driver.getTitle());
+		System.out.println("0 - " + driver.getCurrentUrl());
+		
+		driver.switchTo().frame(0); // First Frame
+		System.out.println("0 - " + driver.getTitle());
+		System.out.println("0 - " + driver.getCurrentUrl());
+		
+		driver.switchTo().parentFrame();
+
+		driver.switchTo().frame(1); // First Frame
+		System.out.println("0 - " + driver.getTitle());
+		System.out.println("0 - " + driver.getCurrentUrl());
+	}
+
 }
