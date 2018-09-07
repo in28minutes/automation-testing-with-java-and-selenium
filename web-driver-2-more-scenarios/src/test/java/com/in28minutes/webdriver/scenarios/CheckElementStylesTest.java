@@ -43,6 +43,7 @@ public class CheckElementStylesTest extends AbstractChromeWebDriverTest {
 		driver.get("http://localhost:8080/pages/forms.html");
 		
 		WebElement errorField = driver.findElement(By.id("disabledInput"));
+		
 		assertFalse(errorField.isEnabled());
 		System.out.println(errorField.isEnabled());//false
 		
@@ -71,9 +72,7 @@ public class CheckElementStylesTest extends AbstractChromeWebDriverTest {
 		System.out.println(inputWarning.getSize());//(414, 34)
 
 		//findElements, findElement
-		
-		//getLocation, getSize
-		
+
 	}
 
 }
