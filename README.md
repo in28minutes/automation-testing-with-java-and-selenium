@@ -46,6 +46,54 @@
 
 ### References
 
+#### Selenium Standalone
+
+- Manual Installation - https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers
+- Automated Installation - https://www.npmjs.com/package/selenium-standalone
+- URL - http://localhost:4444/wd/hub
+
+##### Installation and Launch
+
+- Step I : Install NPM
+- Step II : Install selenium-standalone
+Terminal or Command Prompt
+```
+npm install selenium-standalone@latest -g
+# If need use sudo npm install selenium-standalone@latest -g
+# In Windows, Run CMD as Administrator
+
+sudo selenium-standalone install
+```
+- Step III : Launch Selenium Standalone
+```
+selenium-standalone start
+```
+
+> By default, google chrome, firefox and phantomjs are available when installed on the host system
+```
+# install a single driver within the default list (chrome, ie, edge, firefox) 
+selenium-standalone install --singleDriverInstall=chrome
+```
+
+Reference 
+- More Options - https://www.npmjs.com/package/selenium-standalone#command-line-interface
+
+#### Selenium Grid
+- URL -http://localhost:4444/grid/console
+
+##### Installation and Launch
+- Follow Step I and II of Selenium Standalone
+- Step III
+
+```
+selenium-standalone start -- -role hub
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
+selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
+
+# maxSessions, maxInstances
+```
+
+
 #### Code Snippets
 
 ##### Maven Dependencies
@@ -296,34 +344,6 @@ public abstract class AbstractChromeWebDriverTest {
 ```
 
 #### Resources
-
-##### Selenium Standalone
-- Manual Installation - https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers
-- Automated Installation - http://webdriver.io/guide/getstarted/install.html
-- NPM - https://www.npmjs.com/package/selenium-standalone
-- URL - http://localhost:4444/wd/hub
-
-```
-sudo npm install selenium-standalone@latest -g
-In Windows, Run as Administrator
-
-sudo selenium-standalone install
-selenium-standalone start
-
-selenium-standalone install
-```
-
-##### Selenium Grid
-
-- URL -http://localhost:4444/grid/console
-
-```
-selenium-standalone start -- -role hub
-selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
-selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
-
-maxSessions, maxInstances
-```
 
 ##### Plugins
 - Eclipse Plugin for TestNg - http://beust.com/eclipse
