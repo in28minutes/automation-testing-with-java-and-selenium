@@ -90,7 +90,9 @@ selenium-standalone start -- -role hub
 selenium-standalone start -- -role node -hub http://localhost:4444/grid/register
 selenium-standalone start -- -role node -hub http://localhost:4444/grid/register -port 5556
 
-# maxSessions, maxInstances
+selenium-andalone start -- -role node -hub http://localhost:4444/grid/register -port 5556 -browser browserName=firefox,maxInstances=2
+
+selenium-andalone start -- -role node -hub http://localhost:4444/grid/register -port 5556 -browser browserName=firefox,maxInstances=2 -browser browserName=chrome,maxInstances=2
 ```
 
 
