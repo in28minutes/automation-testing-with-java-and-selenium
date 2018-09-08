@@ -1101,3 +1101,308 @@ public class FacebookLogin {
 }
 
 ```
+
+
+### Examples for Future
+
+#### Text search with contains
+```java
+WebElement notifications = driver.findElement(By.xpath("//*[contains(text(),'" + textToSearchFor + "')]"));
+System.out.println("NOTIFICATIONS : " + notifications.getText());
+```
+
+#### Advanced CSS Selectors
+
+```
+attributeSuffix - driver.findElement(By.cssSelector("input[name$='word']"));
+sibling - driver.findElement(By.cssSelector("input[name='password'] + input[type='submit']"));
+directDescendant - driver.findElement(By.cssSelector("div > input[name='email']"));
+anyDescendant() - driver.findElement(By.cssSelector("form input[name='email']"));
+        attributePrefix - driver.findElement(By.cssSelector("input[name^='pass']"));
+
+```
+
+#### Advanced XPAth Selectors
+
+```
+CLASS - //*[contains(concat(' ',normalize-space(@class),' '),' btn ')]
+driver.findElement(By.xpath("//div[contains(.,'A visible paragraph')]/form"));
+driver.findElement(By.xpath("//*[contains(text(),'A paragraph XXX with this text in bold')]"));
+driver.findElement(By.xpath("//*[contains(normalize-space(.),'A paragraph with this text in bold')]"));
+```
+
+
+#### File Upload
+```
+  @Test
+  public void testFileUpload() throws IOException {
+
+    ChromeDriverManager.getInstance().setup();
+
+    WebDriver driver = new ChromeDriver();
+
+    Path fileToUpload = Files.createTempFile(Paths.get("."), "some-file-to-upload", ".txt");
+
+    driver.get("http://localhost:8080/pages/file-upload.html");
+
+    driver.findElement(By.name("file")).sendKeys(fileToUpload.toFile().getCanonicalPath());
+
+    driver.findElement(By.cssSelector("input[type='submit']")).click();
+
+    String message = driver.findElement(By.id("welcome-message")).getText();
+    System.out.println(message);
+    
+    Files.delete(fileToUpload);
+    driver.close();
+
+    driver.quit();
+
+  }
+```
+
+### Advanced Selenium Listeners
+
+#### /src/test/java/com/in28minutes/automation/webapp/basics/WebDriverEventListenerUsingImplements.java
+
+```java
+public class WebDriverEventListenerUsingImplements implements WebDriverEventListener{
+
+  @Override
+  public void afterClickOn(WebElement element, WebDriver driver) {
+    System.out.printf("Element with tag %s and name %s is clicked \n",  element.getTagName(), element.getAttribute("name"));
+    
+  }
+
+  //Other empty methods are deleted for saving space!!
+
+}
+```
+
+#### Unit Test
+
+```java
+  @Test
+  public void setFormElementsWithListeners() {
+
+    ChromeDriverManager.getInstance().setup();
+
+    WebDriver driver = new ChromeDriver();
+
+    EventFiringWebDriver eventFiringDriver = new EventFiringWebDriver(driver);
+
+    WebDriverEventListenerUsingImplements eventListener = new WebDriverEventListenerUsingImplements();
+
+    eventFiringDriver.register(eventListener);
+
+    eventFiringDriver.get("http://localhost:8080/pages/forms.html");
+
+    driver.findElement(By.id("textElement")).sendKeys("new-textElement-value");
+    driver.findElement(By.id("textAreaElement")).sendKeys("new-textAreaElement-value");
+
+    eventFiringDriver.findElement(By.id("checkboxElement1")).click();
+    eventFiringDriver.findElement(By.id("checkboxElement2")).click();
+
+    driver.findElement(By.id("inlineCheckboxElement1")).click();
+    driver.findElement(By.id("inlineCheckboxElement2")).click();
+
+    List<WebElement> optionRadios = driver.findElements(By.name("optionsRadios"));
+
+    optionRadios.get(1).click();
+
+    List<WebElement> optionsRadiosInline = driver.findElements(By.name("optionsRadiosInline"));
+
+    optionsRadiosInline.get(1).click();
+
+    Select selectElement = new Select(driver.findElement(By.id("selectElement1")));// 1
+
+    selectElement.selectByValue("4");
+
+    Select multiSelectElement = new Select(driver.findElement(By.id("multiSelectElement")));// 1,3
+
+    multiSelectElement.selectByValue("5");
+
+    driver.close();
+    driver.quit();
+  }
+```
+
+#### /src/test/java/com/in28minutes/automation/webapp/basics/WebDriverEventListenerUsingExtends.java
+
+```java
+package com.in28minutes.automation.webapp.basics;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
+
+public class WebDriverEventListenerUsingExtends extends AbstractWebDriverEventListener{
+  
+  @Override
+  public void beforeNavigateTo(String url, WebDriver driver) {
+      System.out.printf("We are at %s and we are navigating to %s \n",  driver.getCurrentUrl(), url);
+  }
+
+  @Override
+  public void afterNavigateTo(String url, WebDriver driver) {
+    System.out.printf("We are at %s and we have navigated to %s \n",  driver.getCurrentUrl(), url);
+  }
+
+  @Override
+  public void beforeNavigateBack(WebDriver driver) {
+    System.out.printf("We are at %s and we want to navigate back \n",  driver.getCurrentUrl());
+  }
+
+  @Override
+  public void afterNavigateBack(WebDriver driver) {
+    System.out.printf("We are at %s and we completed the navigate back \n",  driver.getCurrentUrl());
+  }
+
+  @Override
+  public void afterClickOn(WebElement element, WebDriver driver) {
+    System.out.printf("Element with tag %s and name %s is clicked \n",  element.getTagName(), element.getAttribute("name"));
+  }
+
+}
+```
+
+## Test NG Advanced Features
+
+```java
+
+//@Test(groups={"group-4"})
+public class PlayingWithTestNGTest {
+
+  @Test(groups = { "group1" })
+  //Groups can be Unit Test, Integration Test, Performance etc
+  public void group1Test() {
+    System.out.println("Group 1 Test");
+  }
+
+  @Test(groups = { "group2" })
+  //Groups can be Unit Test, Integration Test etc
+  public void group2Test() {
+    System.out.println("Group 2 Test");
+  }
+
+  @AfterGroups(groups = { "group1" })
+  public void afterGroup1() {
+    System.out.println("After Group1");
+  }
+
+  @BeforeGroups(groups = { "group2" })
+  public void beforeGroup2() {
+    System.out.println("Before Group2");
+  }
+
+  @Test(timeOut = 1000)
+  public void timeoutTest() {
+
+  }
+
+  @Test(expectedExceptions = { Exception.class })
+  public void expectAnException() {
+    throw new RuntimeException("flkasdjf");
+  }
+
+  @Test(enabled = false)
+  public void ignoredTest() {
+
+  }
+
+  @Test
+  @Parameters({ "browser" })
+  public void browserSpecificTest(@Optional("firefox") String browser) {
+    System.out.println(browser);
+  }
+
+  @Test(dependsOnMethods="setupSomething")
+  //dependsOnGroups
+  public void thisTestNeedsSomethingSetup() {
+    System.out.println("I need something else");
+  }
+  
+  @Test
+  public void setupSomething() {
+    System.out.println("Setup Something");    
+  }
+```
+
+### /src/test/java/com/in28minutes/automation/TestNgResultListener.java
+
+```java
+package com.in28minutes.automation;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class TestNgResultListener implements ITestListener{
+
+  public void onFinish(ITestContext arg0) {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void onStart(ITestContext arg0) {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void onTestFailure(ITestResult arg0) {
+    System.out.println("Test Failed");
+    
+  }
+
+  public void onTestSkipped(ITestResult arg0) {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void onTestStart(ITestResult arg0) {
+    // TODO Auto-generated method stub
+    
+  }
+
+  public void onTestSuccess(ITestResult arg0) {
+    System.out.println("Test Succeded");
+    
+  }
+
+}
+```
+---
+
+### /src/test/java/com/in28minutes/automation/TestNgTestReporter.java
+
+```java
+package com.in28minutes.automation;
+
+import java.util.List;
+import java.util.Map;
+
+import org.testng.IReporter;
+import org.testng.ISuite;
+import org.testng.ISuiteResult;
+import org.testng.ITestContext;
+import org.testng.xml.XmlSuite;
+
+public class TestNgTestReporter implements IReporter {
+
+  public void generateReport(List<XmlSuite> xmlSuite, List<ISuite> iSuite, String outputDirectory) {
+    for(ISuite suite: iSuite) {
+      Map<String, ISuiteResult> results = suite.getResults();
+      for(ISuiteResult result:results.values()) {
+        ITestContext testContext = result.getTestContext();
+        System.out.println(testContext.getPassedTests());
+      }
+    }
+    
+  }
+
+}
+```
