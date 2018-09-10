@@ -35,4 +35,10 @@ public class TodoPage {
 	public void submit() {
 		saveButton.submit();
 	}
+	
+	public void enterDetailsAndSubmit(String desc,String targetDate) {
+		enterDescription(desc);
+		enterTargetDate(targetDate);
+		submit();
+	}
 }
