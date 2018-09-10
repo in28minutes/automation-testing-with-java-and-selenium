@@ -1,8 +1,12 @@
 package com.in28minutes.webdriver.temp;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -27,8 +31,18 @@ public class NewTest {
 			driver = new ChromeDriver();
 		}
 
-		driver.get("http://localhost:8080/pages/tables.html");
-		sleep(5);
+		driver.get("http://localhost:8080/pages/forms.html");
+		Actions actions = new Actions(driver);
+
+		WebElement findElement = driver.findElement(By.id("textElement"));
+		
+		actions.click(findElement)
+		.keyDown(findElement, Keys.ALT)
+		.sendKeys(findElement, "abcd")
+				.keyUp(findElement, Keys.ALT).perform();
+		sleep(2);
+
+		driver.quit();
 	}
 
 	private void sleep(int i) {
