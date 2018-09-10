@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class UpdateTodoBasicTest {
+public class UpdateTodoBasicTest3AfterListTodoPage {
 	
 	WebDriver driver;
 	
@@ -39,24 +39,34 @@ public class UpdateTodoBasicTest {
 	}
 	
 	@Test
-	public void updateTodo() {		
+	public void updateTodo() {
+		
+		driver.get("http://localhost:8080/login");
 		
 		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
 		page.login("in28minutes", "dummy");
 					
+		//Click here - Link Text - click
 		driver.findElement(By.linkText("Click here")).click();
 		
-		ListTodoPage listTodoPage = new ListTodoPage(driver);
-		listTodoPage.clickUpdateFor("10002");
+		//id update-10002 click
+		driver.findElement(By.id("update-10002")).click();
 		
 		TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
 		todoPage.enterDescription("Become a Tech Guru - 2");
-		todoPage.enterTargetDate("12/09/2019");
+		todoPage.enterTargetDate("12/09/2019");		
 		todoPage.submit();
 		
-		assertEquals(listTodoPage.getDescription("10002"), 
-							"Become a Tech Guru - 2");
-		assertEquals(listTodoPage.getTargetDate("10002"), "12/09/2019");
+		//check desc-10002
+		String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
+		//check targetdate-10002
+		String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
+		
+		//Become a Tech Guru - 2
+		//12/09/2019
+
+		assertEquals(updatedDesc, "Become a Tech Guru - 2");
+		assertEquals(updatedTargetDate, "12/09/2019");
 		
 	}
 	

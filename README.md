@@ -58,11 +58,13 @@
 - Step II : Install selenium-standalone
 Terminal or Command Prompt
 ```
-npm install selenium-standalone@latest -g
-# If need use sudo npm install selenium-standalone@latest -g
 # In Windows, Run CMD as Administrator
 
-sudo selenium-standalone install
+npm install selenium-standalone@latest -g
+# If need use sudo npm install selenium-standalone@latest -g
+
+selenium-standalone install
+# if needed use sudo 
 ```
 - Step III : Launch Selenium Standalone
 ```
@@ -94,7 +96,6 @@ selenium-andalone start -- -role node -hub http://localhost:4444/grid/register -
 
 selenium-andalone start -- -role node -hub http://localhost:4444/grid/register -port 5556 -browser browserName=firefox,maxInstances=2 -browser browserName=chrome,maxInstances=2
 ```
-
 
 #### Code Snippets
 

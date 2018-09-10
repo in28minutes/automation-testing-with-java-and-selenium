@@ -10,6 +10,7 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver) {
 		super();
+		driver.get("http://localhost:8080/login");
 		this.driver = driver;
 	}
 
@@ -26,17 +27,23 @@ public class LoginPage {
 	WebElement submitButton;
 	
 	//enterName
-	public void enterName(String name) {
-		
+	public void enterName(String nameToEnter) {
+		name.sendKeys(nameToEnter);
 	}
 
 	//enterPassword
-	public void enterPassword(String password) {
-		
+	public void enterPassword(String passwordToEnter) {
+		password.sendKeys(passwordToEnter);
 	}
 
 	//submit
 	public void submit() {
-		
+		submitButton.submit();
+	}
+	
+	public void login(String name, String password) {
+		enterName(name);
+		enterPassword(password);
+		submit();
 	}
 }
