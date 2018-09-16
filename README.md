@@ -293,7 +293,7 @@ public class ExcelReadUtil {
 ```
 
 
-##### TestNG
+##### TestNG (testng.xml)
 
 ```
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
