@@ -38,6 +38,7 @@
 ```
 
 ### XPath Selectors from html css basics
+
 ```
         $x("//input")
         (10) [input#first-name, input#password, input, input, input, input, input, input, input, input]
@@ -88,7 +89,6 @@
         (4) [input, input, input, input]
 
 ```
-
 
 ### /html-basics/1-first-html.html
 
@@ -871,7 +871,7 @@ public class FacebookLogin {
 
   @Before
   public void setUp() throws Exception {
-	  ChromeDriverManager.getInstance().setup();
+      ChromeDriverManager.getInstance().setup();
 
     driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
@@ -964,11 +964,11 @@ public class GoogleSearchForIn28minutes {
 
   @Before
   public void setUp() throws Exception {
-	
-	  ChromeDriverManager.getInstance().setup();
-	  driver = new ChromeDriver();
+    
+      ChromeDriverManager.getInstance().setup();
+      driver = new ChromeDriver();
 
-	  baseUrl = "https://www.katalon.com/";
+      baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -1036,98 +1036,98 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 class SimpleClass {
-	public int sum(int[] numbers) {
-		int sum = 0;
-		
-		for(int i=0; i<numbers.length; i++) {
-			sum += numbers[i];
-		}
-		
-		return sum;
-	}
+    public int sum(int[] numbers) {
+        int sum = 0;
+        
+        for(int i=0; i<numbers.length; i++) {
+            sum += numbers[i];
+        }
+        
+        return sum;
+    }
 }
 
 public class FirstJUnitTest {
 
-	@Test
-	public void test() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {12, 15, 18});
-		
-		//Check the Output
-		int expectedResult = 45;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void test() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {12, 15, 18});
+        
+        //Check the Output
+        int expectedResult = 45;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor0Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {});
-		
-		//Check the Output
-		int expectedResult = 0;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor0Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {});
+        
+        //Check the Output
+        int expectedResult = 0;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor2Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {12, 15});
-		
-		//Check the Output
-		int expectedResult = 27;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor2Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {12, 15});
+        
+        //Check the Output
+        int expectedResult = 27;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor5Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {2, 6, 8, 15, 18});
-		
-		//Check the Output
-		int expectedResult = 49;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor5Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {2, 6, 8, 15, 18});
+        
+        //Check the Output
+        int expectedResult = 49;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
 }
 ```
@@ -1151,77 +1151,77 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirstSeleniumJUnitTest {
 
-	WebDriver webDriver;
+    WebDriver webDriver;
 
-	@Before
-	public void before() {
-		// Execute the Code
+    @Before
+    public void before() {
+        // Execute the Code
 
-		// Download the Web Driver Executable
-		// Set the path to Web Driver Executable
-		WebDriverManager.chromedriver().setup();
+        // Download the Web Driver Executable
+        // Set the path to Web Driver Executable
+        WebDriverManager.chromedriver().setup();
 
-		// Create an instance of WebDriver
+        // Create an instance of WebDriver
 
-		webDriver = new ChromeDriver();
+        webDriver = new ChromeDriver();
 
-	}
+    }
 
-	@Test
-	public void testGoogleDotCom() {
+    @Test
+    public void testGoogleDotCom() {
 
-		// WebDriver - Launch up http://www.google.com
-		webDriver.get("http://www.google.com");
+        // WebDriver - Launch up http://www.google.com
+        webDriver.get("http://www.google.com");
 
-		// https://www.google.com/?gws_rd=ssl
-		// System.out.println(webDriver.getCurrentUrl());
+        // https://www.google.com/?gws_rd=ssl
+        // System.out.println(webDriver.getCurrentUrl());
 
-		// System.out.println(webDriver.getTitle());
+        // System.out.println(webDriver.getTitle());
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Google";
+        String expectedTitle = "Google";
 
-		// Check the output
-		// WebDriver - Title is Google
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        // WebDriver - Title is Google
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@Test
-	public void testFacebookDotCom() {
+    @Test
+    public void testFacebookDotCom() {
 
-		webDriver.get("http://www.facebook.com");
+        webDriver.get("http://www.facebook.com");
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+        String expectedTitle = "Facebook – log in or sign up";
 
-		// Check the output
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@Test
-	@Ignore
-	public void testSomeErrorScenarioCom() {
+    @Test
+    @Ignore
+    public void testSomeErrorScenarioCom() {
 
-		webDriver.get("com");
+        webDriver.get("com");
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+        String expectedTitle = "Facebook – log in or sign up";
 
-		// Check the output
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@After
-	public void after() {
-		System.out.println("I'm, Executed");
-		webDriver.quit();
-	}
+    @After
+    public void after() {
+        System.out.println("I'm, Executed");
+        webDriver.quit();
+    }
 
 }
 
@@ -1257,8 +1257,8 @@ public class FacebookLogin {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-		ChromeDriverManager.getInstance().setup();
-	    driver = new ChromeDriver();
+        ChromeDriverManager.getInstance().setup();
+        driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
@@ -1349,7 +1349,7 @@ public class GoogleSearchForIn28minutes {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-	ChromeDriverManager.getInstance().setup();
+    ChromeDriverManager.getInstance().setup();
     driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -1427,77 +1427,77 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FirstSeleniumTestNgTest {
 
-	WebDriver webDriver;
+    WebDriver webDriver;
 
-	@BeforeTest
-	public void before() {
-		// Execute the Code
+    @BeforeTest
+    public void before() {
+        // Execute the Code
 
-		// Download the Web Driver Executable
-		// Set the path to Web Driver Executable
-		WebDriverManager.chromedriver().setup();
+        // Download the Web Driver Executable
+        // Set the path to Web Driver Executable
+        WebDriverManager.chromedriver().setup();
 
-		// Create an instance of WebDriver
+        // Create an instance of WebDriver
 
-		webDriver = new ChromeDriver();
+        webDriver = new ChromeDriver();
 
-	}
+    }
 
-	@Test
-	public void testGoogleDotCom() {
+    @Test
+    public void testGoogleDotCom() {
 
-		// WebDriver - Launch up http://www.google.com
-		webDriver.get("http://www.google.com");
+        // WebDriver - Launch up http://www.google.com
+        webDriver.get("http://www.google.com");
 
-		// https://www.google.com/?gws_rd=ssl
-		// System.out.println(webDriver.getCurrentUrl());
+        // https://www.google.com/?gws_rd=ssl
+        // System.out.println(webDriver.getCurrentUrl());
 
-		// System.out.println(webDriver.getTitle());
+        // System.out.println(webDriver.getTitle());
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Google";
+        String expectedTitle = "Google";
 
-		// Check the output
-		// WebDriver - Title is Google
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        // WebDriver - Title is Google
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@Test
-	public void testFacebookDotCom() {
+    @Test
+    public void testFacebookDotCom() {
 
-		webDriver.get("http://www.facebook.com");
+        webDriver.get("http://www.facebook.com");
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+        String expectedTitle = "Facebook – log in or sign up";
 
-		// Check the output
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@Test
-	@Ignore
-	public void testSomeErrorScenarioCom() {
+    @Test
+    @Ignore
+    public void testSomeErrorScenarioCom() {
 
-		webDriver.get("com");
+        webDriver.get("com");
 
-		String actualTitle = webDriver.getTitle();
+        String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+        String expectedTitle = "Facebook – log in or sign up";
 
-		// Check the output
-		assertEquals(expectedTitle, actualTitle);
+        // Check the output
+        assertEquals(expectedTitle, actualTitle);
 
-	}
+    }
 
-	@AfterTest
-	public void after() {
-		System.out.println("I'm, Executed");
-		webDriver.quit();
-	}
+    @AfterTest
+    public void after() {
+        System.out.println("I'm, Executed");
+        webDriver.quit();
+    }
 
 }
 
@@ -1517,98 +1517,98 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Test;
 
 class SimpleClass {
-	public int sum(int[] numbers) {
-		int sum = 0;
-		
-		for(int i=0; i<numbers.length; i++) {
-			sum += numbers[i];
-		}
-		
-		return sum;
-	}
+    public int sum(int[] numbers) {
+        int sum = 0;
+        
+        for(int i=0; i<numbers.length; i++) {
+            sum += numbers[i];
+        }
+        
+        return sum;
+    }
 }
 
 public class FirstTestngTest {
 
-	@Test
-	public void test() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {12, 15, 18});
-		
-		//Check the Output
-		int expectedResult = 45;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void test() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {12, 15, 18});
+        
+        //Check the Output
+        int expectedResult = 45;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor0Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {});
-		
-		//Check the Output
-		int expectedResult = 0;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor0Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {});
+        
+        //Check the Output
+        int expectedResult = 0;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor2Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {12, 15});
-		
-		//Check the Output
-		int expectedResult = 27;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor2Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {12, 15});
+        
+        //Check the Output
+        int expectedResult = 27;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
-	@Test
-	public void testFor5Elements() {
-		
-		//Execute the Code
-		SimpleClass simpleClass = new SimpleClass();
-		
-		int actualResult = simpleClass.sum( new int[] {2, 6, 8, 15, 18});
-		
-		//Check the Output
-		int expectedResult = 49;
-		
-		//check expectedResult is equal to actualResult
-		assertEquals(expectedResult, actualResult);
-		
-		
-		//No checks
-		//Checks
-		//Absence of Failure is Success
-	}
+    @Test
+    public void testFor5Elements() {
+        
+        //Execute the Code
+        SimpleClass simpleClass = new SimpleClass();
+        
+        int actualResult = simpleClass.sum( new int[] {2, 6, 8, 15, 18});
+        
+        //Check the Output
+        int expectedResult = 49;
+        
+        //check expectedResult is equal to actualResult
+        assertEquals(expectedResult, actualResult);
+        
+        
+        //No checks
+        //Checks
+        //Absence of Failure is Success
+    }
 
 }
 ```
@@ -1624,11 +1624,11 @@ import org.testng.annotations.Test;
 
 public class MultipleBrowserTest {
   
-	@Parameters("browser")
-	@Test
-	public void runInBrowser(String browser) {
-		System.out.println(browser);
-	}
+    @Parameters("browser")
+    @Test
+    public void runInBrowser(String browser) {
+        System.out.println(browser);
+    }
 }
 ```
 
@@ -1648,33 +1648,33 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class AbstractChromeWebDriverTest {
 
-	protected WebDriver driver;
+    protected WebDriver driver;
 
-	public AbstractChromeWebDriverTest() {
-		super();
-	}
+    public AbstractChromeWebDriverTest() {
+        super();
+    }
 
-	@BeforeTest
-	public void beforeTest() {
-		//Download the web driver executable
-		WebDriverManager.chromedriver().setup();
-		
-		//Create a instance of your web driver - chrome
-		driver = new ChromeDriver();
-	}
+    @BeforeTest
+    public void beforeTest() {
+        //Download the web driver executable
+        WebDriverManager.chromedriver().setup();
+        
+        //Create a instance of your web driver - chrome
+        driver = new ChromeDriver();
+    }
 
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
-	
-	public void sleep(int seconds) {
-		try {
-			Thread.sleep(seconds * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
+    
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
 ```
@@ -1697,85 +1697,85 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class FormElementCheckBoxTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void readFromACheckBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement checkboxElement1 = driver.findElement(By.name("checkboxElement1"));
-		System.out.println(checkboxElement1.isSelected());//false
-		assertFalse(checkboxElement1.isSelected());
-		
-		WebElement checkboxElement2 = driver.findElement(By.name("checkboxElement2"));
-		System.out.println(checkboxElement2.isSelected());//true
-		assertTrue(checkboxElement2.isSelected());
-	}
-	
-	@Test
-	public void setAValueIntoCheckBoxElement1() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement checkboxElement1 = driver.findElement(By.name("checkboxElement1"));
-		sleep(4);
-		checkboxElement1.click();
-		sleep(4);
-		WebElement checkboxElement3 = driver.findElement(By.name("checkboxElement3"));
-		sleep(4);
-		checkboxElement3.click();
-		sleep(4);
-	}
+    @Test
+    public void readFromACheckBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement checkboxElement1 = driver.findElement(By.name("checkboxElement1"));
+        System.out.println(checkboxElement1.isSelected());//false
+        assertFalse(checkboxElement1.isSelected());
+        
+        WebElement checkboxElement2 = driver.findElement(By.name("checkboxElement2"));
+        System.out.println(checkboxElement2.isSelected());//true
+        assertTrue(checkboxElement2.isSelected());
+    }
+    
+    @Test
+    public void setAValueIntoCheckBoxElement1() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement checkboxElement1 = driver.findElement(By.name("checkboxElement1"));
+        sleep(4);
+        checkboxElement1.click();
+        sleep(4);
+        WebElement checkboxElement3 = driver.findElement(By.name("checkboxElement3"));
+        sleep(4);
+        checkboxElement3.click();
+        sleep(4);
+    }
 
-	@Test
-	public void checkACheckBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		checkACheckBox("checkboxElement1");
-		sleep(2);
-		checkACheckBox("checkboxElement2");
-		sleep(2);
-		checkACheckBox("checkboxElement3");
-		
-		checkACheckBox("inlineCheckboxElement1");
-		checkACheckBox("inlineCheckboxElement2");
-		checkACheckBox("inlineCheckboxElement3");
-		sleep(4);
+    @Test
+    public void checkACheckBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        checkACheckBox("checkboxElement1");
+        sleep(2);
+        checkACheckBox("checkboxElement2");
+        sleep(2);
+        checkACheckBox("checkboxElement3");
+        
+        checkACheckBox("inlineCheckboxElement1");
+        checkACheckBox("inlineCheckboxElement2");
+        checkACheckBox("inlineCheckboxElement3");
+        sleep(4);
 
-	}
+    }
 
-	@Test
-	public void unCheckACheckBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		unCheckACheckBox("checkboxElement1");
-		sleep(2);
-		unCheckACheckBox("checkboxElement2");
-		sleep(2);
-		unCheckACheckBox("checkboxElement3");
+    @Test
+    public void unCheckACheckBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        unCheckACheckBox("checkboxElement1");
+        sleep(2);
+        unCheckACheckBox("checkboxElement2");
+        sleep(2);
+        unCheckACheckBox("checkboxElement3");
 
-		unCheckACheckBox("inlineCheckboxElement1");
-		unCheckACheckBox("inlineCheckboxElement2");
-		unCheckACheckBox("inlineCheckboxElement3");
-		
-		sleep(4);
+        unCheckACheckBox("inlineCheckboxElement1");
+        unCheckACheckBox("inlineCheckboxElement2");
+        unCheckACheckBox("inlineCheckboxElement3");
+        
+        sleep(4);
 
-	}
+    }
 
-	private void checkACheckBox(String checkboxName) {
-		WebElement checkboxElement1 = driver.findElement(By.name(checkboxName));
-		
-		boolean currentValue = checkboxElement1.isSelected();
-		
-		if(currentValue==false) {
-			checkboxElement1.click();
-		}
-	}
-	
-	private void unCheckACheckBox(String checkboxName) {
-		WebElement checkboxElement1 = driver.findElement(By.name(checkboxName));
-		
-		boolean currentValue = checkboxElement1.isSelected();
-		
-		if(currentValue==true) {
-			checkboxElement1.click();
-		}
-	}
+    private void checkACheckBox(String checkboxName) {
+        WebElement checkboxElement1 = driver.findElement(By.name(checkboxName));
+        
+        boolean currentValue = checkboxElement1.isSelected();
+        
+        if(currentValue==false) {
+            checkboxElement1.click();
+        }
+    }
+    
+    private void unCheckACheckBox(String checkboxName) {
+        WebElement checkboxElement1 = driver.findElement(By.name(checkboxName));
+        
+        boolean currentValue = checkboxElement1.isSelected();
+        
+        if(currentValue==true) {
+            checkboxElement1.click();
+        }
+    }
 
 }
 ```
@@ -1796,104 +1796,104 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class FormElementRadioButtonTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void readFromARadioButton() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		List<WebElement> options = driver.findElements(By.name("optionsRadios"));
-		for (WebElement option : options) {
-			System.out.println(option.getAttribute("value") + " " + option.isSelected());
-		}
-		// option1 false
-		// option2 false
-		// option3 true
+    @Test
+    public void readFromARadioButton() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        List<WebElement> options = driver.findElements(By.name("optionsRadios"));
+        for (WebElement option : options) {
+            System.out.println(option.getAttribute("value") + " " + option.isSelected());
+        }
+        // option1 false
+        // option2 false
+        // option3 true
 
-	}
+    }
 
-	@Test
-	public void readFromARadioButtonWithAFrameworkMethod() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		System.out.println(getSelectedRadioButtonValue("optionsRadios"));// option3
-		System.out.println(getSelectedRadioButtonValue("optionsRadiosInline"));
+    @Test
+    public void readFromARadioButtonWithAFrameworkMethod() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        System.out.println(getSelectedRadioButtonValue("optionsRadios"));// option3
+        System.out.println(getSelectedRadioButtonValue("optionsRadiosInline"));
 
-	}
+    }
 
-	@Test
-	public void setValueForRadioButton() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		List<WebElement> options = driver.findElements(By.name("optionsRadios"));
-		sleep(4);
-		for (WebElement option : options) {
-			if (option.getAttribute("value").equals("option2")) {
-				option.click();
-			}
-		}
-		sleep(4);
-	}
+    @Test
+    public void setValueForRadioButton() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        List<WebElement> options = driver.findElements(By.name("optionsRadios"));
+        sleep(4);
+        for (WebElement option : options) {
+            if (option.getAttribute("value").equals("option2")) {
+                option.click();
+            }
+        }
+        sleep(4);
+    }
 
-	@Test
-	public void setValueForRadioButtonWithAFrameworkMethod() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		sleep(4);
-		setRadioButtonToValue("optionsRadios", "option2");
-		sleep(4);
-		setRadioButtonToValue("optionsRadiosInline", "inline-option1");
-	}
+    @Test
+    public void setValueForRadioButtonWithAFrameworkMethod() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        sleep(4);
+        setRadioButtonToValue("optionsRadios", "option2");
+        sleep(4);
+        setRadioButtonToValue("optionsRadiosInline", "inline-option1");
+    }
 
-	private void setRadioButtonToValue(String radioButtonName, String valueToSelect) {
-		List<WebElement> options = driver.findElements(By.name(radioButtonName));
-		for (WebElement option : options) {
-			if (option.getAttribute("value").equals(valueToSelect)) {
-				option.click();
-			}
-		}
-	}
+    private void setRadioButtonToValue(String radioButtonName, String valueToSelect) {
+        List<WebElement> options = driver.findElements(By.name(radioButtonName));
+        for (WebElement option : options) {
+            if (option.getAttribute("value").equals(valueToSelect)) {
+                option.click();
+            }
+        }
+    }
 
-	private String getSelectedRadioButtonValue(String name) {
+    private String getSelectedRadioButtonValue(String name) {
 
-		List<WebElement> options = driver.findElements(By.name(name));
+        List<WebElement> options = driver.findElements(By.name(name));
 
-		for (WebElement option : options) {
-			if (option.isSelected()) {
-				return option.getAttribute("value");
-			}
-		}
+        for (WebElement option : options) {
+            if (option.isSelected()) {
+                return option.getAttribute("value");
+            }
+        }
 
-		return null;
-	}
+        return null;
+    }
 
-	@Test
-	public void setValueForRadioButtonWithAFrameworkMethod_UsingCSS() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		sleep(4);
-		setRadioButtonToValueUsingCSS("optionsRadios", "option2");
-		sleep(4);
-		setRadioButtonToValueUsingCSS("optionsRadiosInline", "inline-option1");
-		sleep(4);
-	}
+    @Test
+    public void setValueForRadioButtonWithAFrameworkMethod_UsingCSS() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        sleep(4);
+        setRadioButtonToValueUsingCSS("optionsRadios", "option2");
+        sleep(4);
+        setRadioButtonToValueUsingCSS("optionsRadiosInline", "inline-option1");
+        sleep(4);
+    }
 
-	private void setRadioButtonToValueUsingCSS(String radioButtonName, String valueToSelect) {
-		String cssSelector = "input[name='" + radioButtonName + "'][value='" + valueToSelect + "']";
+    private void setRadioButtonToValueUsingCSS(String radioButtonName, String valueToSelect) {
+        String cssSelector = "input[name='" + radioButtonName + "'][value='" + valueToSelect + "']";
 
-		WebElement option = driver.findElement(By.cssSelector(cssSelector));
-		option.click();
-	}
+        WebElement option = driver.findElement(By.cssSelector(cssSelector));
+        option.click();
+    }
 
-	@Test
-	public void setValueForRadioButtonWithAFrameworkMethod_UsingXPath() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		sleep(4);
-		setRadioButtonToValueUsingXPath("optionsRadios", "option2");
-		sleep(4);
-		setRadioButtonToValueUsingXPath("optionsRadiosInline", "inline-option1");
-		sleep(4);
-	}
+    @Test
+    public void setValueForRadioButtonWithAFrameworkMethod_UsingXPath() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        sleep(4);
+        setRadioButtonToValueUsingXPath("optionsRadios", "option2");
+        sleep(4);
+        setRadioButtonToValueUsingXPath("optionsRadiosInline", "inline-option1");
+        sleep(4);
+    }
 
-	private void setRadioButtonToValueUsingXPath(String radioButtonName, String valueToSelect) {
-		String cssSelector = "//input[@name='" + radioButtonName + "'][@value='" + valueToSelect + "']";
+    private void setRadioButtonToValueUsingXPath(String radioButtonName, String valueToSelect) {
+        String cssSelector = "//input[@name='" + radioButtonName + "'][@value='" + valueToSelect + "']";
 
-		WebElement option = driver.findElement(By.xpath(cssSelector));
-		option.click();
-	}
+        WebElement option = driver.findElement(By.xpath(cssSelector));
+        option.click();
+    }
 
 }
 ```
@@ -1913,62 +1913,62 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class FormElementSelectTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void readValueOfSelectBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement selectElement = driver.findElement(By.id("selectElement1"));
-		Select select = new Select(selectElement);
-		System.out.println(select.isMultiple());
-		System.out.println(select.getFirstSelectedOption().getText());
-	}
-	
-	@Test
-	public void readValueFromMultiSelectBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement selectElement = driver.findElement(By.id("multiSelectElement"));
-		Select select = new Select(selectElement);
-		System.out.println(select.isMultiple());//true
-		System.out.println(select.getFirstSelectedOption().getText());//One
-		for (WebElement element : select.getAllSelectedOptions()) {
-			System.out.println(element.getText());//One,Three
-		}
-	}
-	
-	@Test
-	public void setValuesIntoSelectBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement selectElement = driver.findElement(By.id("selectElement1"));
-		sleep(5);
-		Select select = new Select(selectElement);
-		select.selectByValue("2");
-		sleep(5);
-		select.selectByVisibleText("Five");
-		sleep(5);
-		select.selectByIndex(3);
-		sleep(5);
-		System.out.println(select.isMultiple());
-		System.out.println(select.getFirstSelectedOption().getText());
-	}
+    @Test
+    public void readValueOfSelectBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement selectElement = driver.findElement(By.id("selectElement1"));
+        Select select = new Select(selectElement);
+        System.out.println(select.isMultiple());
+        System.out.println(select.getFirstSelectedOption().getText());
+    }
+    
+    @Test
+    public void readValueFromMultiSelectBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement selectElement = driver.findElement(By.id("multiSelectElement"));
+        Select select = new Select(selectElement);
+        System.out.println(select.isMultiple());//true
+        System.out.println(select.getFirstSelectedOption().getText());//One
+        for (WebElement element : select.getAllSelectedOptions()) {
+            System.out.println(element.getText());//One,Three
+        }
+    }
+    
+    @Test
+    public void setValuesIntoSelectBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement selectElement = driver.findElement(By.id("selectElement1"));
+        sleep(5);
+        Select select = new Select(selectElement);
+        select.selectByValue("2");
+        sleep(5);
+        select.selectByVisibleText("Five");
+        sleep(5);
+        select.selectByIndex(3);
+        sleep(5);
+        System.out.println(select.isMultiple());
+        System.out.println(select.getFirstSelectedOption().getText());
+    }
 
-	@Test
-	public void setValuesIntoMultiSelectBox() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement selectElement = driver.findElement(By.id("multiSelectElement"));
-		sleep(5);
-		Select select = new Select(selectElement);
-		select.deselectAll();
-		sleep(3);
-		select.selectByValue("2");
-		sleep(3);
-		select.selectByVisibleText("Five");
-		sleep(3);
-		select.selectByIndex(3);
-		sleep(3);
-		select.deselectByVisibleText("Four");
-		sleep(3);
-		System.out.println(select.isMultiple());
-		System.out.println(select.getFirstSelectedOption().getText());
-	}
+    @Test
+    public void setValuesIntoMultiSelectBox() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement selectElement = driver.findElement(By.id("multiSelectElement"));
+        sleep(5);
+        Select select = new Select(selectElement);
+        select.deselectAll();
+        sleep(3);
+        select.selectByValue("2");
+        sleep(3);
+        select.selectByVisibleText("Five");
+        sleep(3);
+        select.selectByIndex(3);
+        sleep(3);
+        select.deselectByVisibleText("Four");
+        sleep(3);
+        System.out.println(select.isMultiple());
+        System.out.println(select.getFirstSelectedOption().getText());
+    }
 
 }
 ```
@@ -1989,41 +1989,41 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class FormElementTextTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void readFromATextElement() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		assertEquals(
-				driver.findElement(By.id("textElement")).getAttribute("value"), 
-				"in28minutes");
-	}
-	
-	@Test
-	public void setASpecificValueIntoTextElement() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement textElement = driver.findElement(By.id("textElement"));
-		sleep(4);
-		textElement.clear();
-		textElement.sendKeys("NewValue");
-		sleep(4);
-	}
+    @Test
+    public void readFromATextElement() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        assertEquals(
+                driver.findElement(By.id("textElement")).getAttribute("value"), 
+                "in28minutes");
+    }
+    
+    @Test
+    public void setASpecificValueIntoTextElement() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement textElement = driver.findElement(By.id("textElement"));
+        sleep(4);
+        textElement.clear();
+        textElement.sendKeys("NewValue");
+        sleep(4);
+    }
 
-	@Test
-	public void writeAndReadAValueFromTextArea() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		WebElement textArea = driver.findElement(By.id("textAreaElement"));
-		
-		assertEquals(textArea.getAttribute("value"),"");
-		sleep(4);
-		textArea.clear();
-		textArea.sendKeys("FirstLine");
-		textArea.sendKeys("\n");
-		textArea.sendKeys("SecondLine");
-		sleep(4);
-		System.out.println(textArea.getAttribute("value"));
-		assertEquals(textArea.getAttribute("value"),"FirstLine\nSecondLine");
-		
-	}
+    @Test
+    public void writeAndReadAValueFromTextArea() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        WebElement textArea = driver.findElement(By.id("textAreaElement"));
+        
+        assertEquals(textArea.getAttribute("value"),"");
+        sleep(4);
+        textArea.clear();
+        textArea.sendKeys("FirstLine");
+        textArea.sendKeys("\n");
+        textArea.sendKeys("SecondLine");
+        sleep(4);
+        System.out.println(textArea.getAttribute("value"));
+        assertEquals(textArea.getAttribute("value"),"FirstLine\nSecondLine");
+        
+    }
 
 }
 ```
@@ -2043,41 +2043,41 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class WebDriverBasicsLocatorsPerformanceTest extends AbstractChromeWebDriverTest{
-	
-	@Test
-	public void testCssSelectorForMultipleTableTd() {	
-		driver.get("http://localhost:8080/pages/tables.html");
-		WebElement browserRow1 = driver.findElement(
-				By.cssSelector("#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)"));
-		WebElement browserRow2 = driver.findElement(
-				By.cssSelector("#dataTables-example > tbody > tr:nth-child(2) > td:nth-child(2)"));
-		WebElement browserRow3 = driver.findElement(
-				By.cssSelector("#dataTables-example > tbody > tr:nth-child(3) > td:nth-child(2)"));
-		assertEquals(browserRow1.getText(), "Firefox 1.0");		
-		assertEquals(browserRow2.getText(), "Firefox 1.5");		
-		assertEquals(browserRow3.getText(), "Firefox 2.0");		
-	}
-	
-	@Test
-	public void testCssSelectorForMultipleTableTd_MorePerformance() {	
-		driver.get("http://localhost:8080/pages/tables.html");
-		
-		WebElement tableTbody = driver.findElement(
-				By.cssSelector("#dataTables-example > tbody"));
-		
-		WebElement browserRow1 = 
-				tableTbody.findElement(By.cssSelector("tr:nth-child(1) > td:nth-child(2)"));
+    
+    @Test
+    public void testCssSelectorForMultipleTableTd() {   
+        driver.get("http://localhost:8080/pages/tables.html");
+        WebElement browserRow1 = driver.findElement(
+                By.cssSelector("#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)"));
+        WebElement browserRow2 = driver.findElement(
+                By.cssSelector("#dataTables-example > tbody > tr:nth-child(2) > td:nth-child(2)"));
+        WebElement browserRow3 = driver.findElement(
+                By.cssSelector("#dataTables-example > tbody > tr:nth-child(3) > td:nth-child(2)"));
+        assertEquals(browserRow1.getText(), "Firefox 1.0");     
+        assertEquals(browserRow2.getText(), "Firefox 1.5");     
+        assertEquals(browserRow3.getText(), "Firefox 2.0");     
+    }
+    
+    @Test
+    public void testCssSelectorForMultipleTableTd_MorePerformance() {   
+        driver.get("http://localhost:8080/pages/tables.html");
+        
+        WebElement tableTbody = driver.findElement(
+                By.cssSelector("#dataTables-example > tbody"));
+        
+        WebElement browserRow1 = 
+                tableTbody.findElement(By.cssSelector("tr:nth-child(1) > td:nth-child(2)"));
 
-		WebElement browserRow2 = 
-				tableTbody.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2)"));
+        WebElement browserRow2 = 
+                tableTbody.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2)"));
 
-		WebElement browserRow3 = 
-				tableTbody.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2)"));
+        WebElement browserRow3 = 
+                tableTbody.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2)"));
 
-		assertEquals(browserRow1.getText(), "Firefox 1.0");		
-		assertEquals(browserRow2.getText(), "Firefox 1.5");		
-		assertEquals(browserRow3.getText(), "Firefox 2.0");		
-	}	
+        assertEquals(browserRow1.getText(), "Firefox 1.0");     
+        assertEquals(browserRow2.getText(), "Firefox 1.5");     
+        assertEquals(browserRow3.getText(), "Firefox 2.0");     
+    }   
 
 }
 ```
@@ -2097,25 +2097,25 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class WebDriverBasicsLocatorsWithClassTest extends AbstractChromeWebDriverTest{
-	
-	@Test
-	public void testTitle() {	
-		driver.get("http://localhost:8080/pages/index.html");
-		WebElement title = driver.findElement(By.className("navbar-brand"));
-		assertEquals(title.getText(), "SB Admin v2.0");		
-	}
-	
-	//huge
-	@Test
-	public void testHugeTextElements() {	
-		driver.get("http://localhost:8080/pages/index.html");
-		List<WebElement> hugeElements = driver.findElements(By.className("huge"));
-		for(WebElement element: hugeElements) {
-			System.out.println(element.getText());
-		}
+    
+    @Test
+    public void testTitle() {   
+        driver.get("http://localhost:8080/pages/index.html");
+        WebElement title = driver.findElement(By.className("navbar-brand"));
+        assertEquals(title.getText(), "SB Admin v2.0");     
+    }
+    
+    //huge
+    @Test
+    public void testHugeTextElements() {    
+        driver.get("http://localhost:8080/pages/index.html");
+        List<WebElement> hugeElements = driver.findElements(By.className("huge"));
+        for(WebElement element: hugeElements) {
+            System.out.println(element.getText());
+        }
 
-	}
-	
+    }
+    
 }
 ```
 ---
@@ -2135,49 +2135,49 @@ import org.testng.annotations.Test;
 
 public class WebDriverBasicsLocatorsWithCSSSelectorTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testCssSelectorForaTableTd() {
-		driver.get("http://localhost:8080/pages/tables.html");
+    @Test
+    public void testCssSelectorForaTableTd() {
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		WebElement browserRow1 = driver
-				.findElement(By.cssSelector("#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)"));
-		assertEquals(browserRow1.getText(), "Firefox 1.0");
-		
-	}
+        WebElement browserRow1 = driver
+                .findElement(By.cssSelector("#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)"));
+        assertEquals(browserRow1.getText(), "Firefox 1.0");
+        
+    }
 
-	// $$("#dataTables-example > thead > tr > th:nth-child(2)")
-	// [th.sorting]0: th.sortinglength: 1__proto__: Array(0)
-	// $$("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1")
-	// [td.sorting_1]
+    // $$("#dataTables-example > thead > tr > th:nth-child(2)")
+    // [th.sorting]0: th.sortinglength: 1__proto__: Array(0)
+    // $$("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1")
+    // [td.sorting_1]
 
-	@Test
-	public void testCssSelectorForSortingAndCheckingFirstRow() {
-		driver.get("http://localhost:8080/pages/tables.html");
+    @Test
+    public void testCssSelectorForSortingAndCheckingFirstRow() {
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		/*
-		 * <tr class="gradeA odd" role="row"> <td class="sorting_1">Gecko</td>
-		 * <td>Firefox 1.0</td> <td>Win 98+ / OSX.2+</td> <td class="center">1.7</td>
-		 * <td class="center">A</td> </tr>
-		 * 
-		 * 
-		 * <tr class="gradeU odd" role="row"> <td class="">Other browsers</td> <td
-		 * class="sorting_1">All others</td> <td>-</td> <td class="center">-</td> <td
-		 * class="center">U</td> </tr>
-		 */
+        /*
+         * <tr class="gradeA odd" role="row"> <td class="sorting_1">Gecko</td>
+         * <td>Firefox 1.0</td> <td>Win 98+ / OSX.2+</td> <td class="center">1.7</td>
+         * <td class="center">A</td> </tr>
+         * 
+         * 
+         * <tr class="gradeU odd" role="row"> <td class="">Other browsers</td> <td
+         * class="sorting_1">All others</td> <td>-</td> <td class="center">-</td> <td
+         * class="center">U</td> </tr>
+         */
 
-		// #dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)
-		// #dataTables-example > tbody > tr.gradeU.odd > td.sorting_1
+        // #dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)
+        // #dataTables-example > tbody > tr.gradeU.odd > td.sorting_1
 
-		WebElement headerBrowser = driver
-				.findElement(By.cssSelector("#dataTables-example > thead > tr > th:nth-child(2)"));
+        WebElement headerBrowser = driver
+                .findElement(By.cssSelector("#dataTables-example > thead > tr > th:nth-child(2)"));
 
-		headerBrowser.click();
+        headerBrowser.click();
 
-		WebElement element = driver
-				.findElement(By.cssSelector("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1"));
+        WebElement element = driver
+                .findElement(By.cssSelector("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1"));
 
-		assertEquals(element.getText(), "All others");
-	}
+        assertEquals(element.getText(), "All others");
+    }
 
 }
 ```
@@ -2201,45 +2201,45 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverBasicsLocatorsWithIdTest extends AbstractChromeWebDriverTest{
-	
-	@Test
-	public void testTitle() {
-	
-		//get the http://localhost:8080/login
-		driver.get("http://localhost:8080/login");
-		
-		//assert the title
-		assertEquals("First Web Application",
-				driver.getTitle());//First Web Application
-		
-	}
-	
-	@Test
-	public void testGetInformationAboutName() {
-		driver.get("http://localhost:8080/login");
-		WebElement nameElement = driver.findElement(By.id("name"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("type"));//text
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
+    
+    @Test
+    public void testTitle() {
+    
+        //get the http://localhost:8080/login
+        driver.get("http://localhost:8080/login");
+        
+        //assert the title
+        assertEquals("First Web Application",
+                driver.getTitle());//First Web Application
+        
+    }
+    
+    @Test
+    public void testGetInformationAboutName() {
+        driver.get("http://localhost:8080/login");
+        WebElement nameElement = driver.findElement(By.id("name"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("type"));//text
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
 
-	@Test
-	public void testGetInformationAboutPassword() {
-		driver.get("http://localhost:8080/login");
-		WebElement nameElement = driver.findElement(By.id("password"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("type"));//password
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
-	
-	@Test
-	public void testGetInformationAboutSubmitButton() {
-		driver.get("http://localhost:8080/login");
-		WebElement nameElement = driver.findElement(By.id("submit"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("type"));//submit
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
+    @Test
+    public void testGetInformationAboutPassword() {
+        driver.get("http://localhost:8080/login");
+        WebElement nameElement = driver.findElement(By.id("password"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("type"));//password
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
+    
+    @Test
+    public void testGetInformationAboutSubmitButton() {
+        driver.get("http://localhost:8080/login");
+        WebElement nameElement = driver.findElement(By.id("submit"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("type"));//submit
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
 
 }
 ```
@@ -2258,29 +2258,29 @@ public class WebDriverBasicsLocatorsWithLinkTextTest extends AbstractChromeWebDr
   
   @Test
   public void getIn28MinuteLinkAndClickIt() {
-	  driver.get("http://localhost:8080/login");
-	  WebElement link = driver.findElement(By.linkText("in28Minutes"));
-	  System.out.println(link.getAttribute("href"));//http://www.in28minutes.com/
-	  link.click();
-	  System.out.println(driver.getCurrentUrl());// http://www.in28minutes.com/
+      driver.get("http://localhost:8080/login");
+      WebElement link = driver.findElement(By.linkText("in28Minutes"));
+      System.out.println(link.getAttribute("href"));//http://www.in28minutes.com/
+      link.click();
+      System.out.println(driver.getCurrentUrl());// http://www.in28minutes.com/
   }
   
   @Test
   public void getTableLinkAndClickIt() {
-	  driver.get("http://localhost:8080/pages/index.html");
-	  WebElement link = driver.findElement(By.linkText("Tables"));
-	  System.out.println(link.getAttribute("href"));
-	  link.click();
-	  System.out.println(driver.getCurrentUrl());
+      driver.get("http://localhost:8080/pages/index.html");
+      WebElement link = driver.findElement(By.linkText("Tables"));
+      System.out.println(link.getAttribute("href"));
+      link.click();
+      System.out.println(driver.getCurrentUrl());
   }
 
   @Test
   public void getSBAdminLinkAndClickIt() {
-	  driver.get("http://localhost:8080/pages/index.html");
-	  WebElement link = driver.findElement(By.partialLinkText("SB Admin"));
-	  System.out.println(link.getAttribute("href"));
-	  link.click();
-	  System.out.println(driver.getCurrentUrl());
+      driver.get("http://localhost:8080/pages/index.html");
+      WebElement link = driver.findElement(By.partialLinkText("SB Admin"));
+      System.out.println(link.getAttribute("href"));
+      link.click();
+      System.out.println(driver.getCurrentUrl());
   }
 
   
@@ -2299,52 +2299,52 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class WebDriverBasicsLocatorsWithNameTest extends AbstractChromeWebDriverTest {
-	
-	@Test
-	public void testGetInformationAboutEmail() {
-		driver.get("http://localhost:8080/pages/login.html");
-		WebElement nameElement = driver.findElement(By.name("email"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("class"));//form-control
-		System.out.println(nameElement.getAttribute("placeholder"));//E-mail
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
+    
+    @Test
+    public void testGetInformationAboutEmail() {
+        driver.get("http://localhost:8080/pages/login.html");
+        WebElement nameElement = driver.findElement(By.name("email"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("class"));//form-control
+        System.out.println(nameElement.getAttribute("placeholder"));//E-mail
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
 
-	@Test
-	public void testGetInformationAboutPassword() {
-		driver.get("http://localhost:8080/pages/login.html");
-		WebElement nameElement = driver.findElement(By.name("password"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("class"));//form-control
-		System.out.println(nameElement.getAttribute("placeholder"));//Password
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
+    @Test
+    public void testGetInformationAboutPassword() {
+        driver.get("http://localhost:8080/pages/login.html");
+        WebElement nameElement = driver.findElement(By.name("password"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("class"));//form-control
+        System.out.println(nameElement.getAttribute("placeholder"));//Password
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
 
 
-	@Test
-	public void testGetInformationAboutCheckbox() {
-		driver.get("http://localhost:8080/pages/login.html");
-		WebElement nameElement = driver.findElement(By.name("remember"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("class"));//
-		System.out.println(nameElement.getAttribute("value"));//Remember Me
-		System.out.println(nameElement.getAttribute("type"));//checkbox
-	}
-	
-	@Test
-	@Ignore
-	public void testGetInformationAboutSubmitButton() {
-		driver.get("http://localhost:8080/pages/login.html");
-		WebElement nameElement = driver.findElement(By.id("submit"));
-		System.out.println(nameElement.getTagName());//input
-		System.out.println(nameElement.getAttribute("type"));//submit
-		System.out.println(nameElement.getAttribute("value"));//EMPTY
-	}
+    @Test
+    public void testGetInformationAboutCheckbox() {
+        driver.get("http://localhost:8080/pages/login.html");
+        WebElement nameElement = driver.findElement(By.name("remember"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("class"));//
+        System.out.println(nameElement.getAttribute("value"));//Remember Me
+        System.out.println(nameElement.getAttribute("type"));//checkbox
+    }
+    
+    @Test
+    @Ignore
+    public void testGetInformationAboutSubmitButton() {
+        driver.get("http://localhost:8080/pages/login.html");
+        WebElement nameElement = driver.findElement(By.id("submit"));
+        System.out.println(nameElement.getTagName());//input
+        System.out.println(nameElement.getAttribute("type"));//submit
+        System.out.println(nameElement.getAttribute("value"));//EMPTY
+    }
 
-	//FAILED: testGetInformationAboutSubmitButton
-	//org.openqa.selenium.NoSuchElementException: 
-	//no such element: Unable to locate element: 
-	//{"method":"id","selector":"submit"}
+    //FAILED: testGetInformationAboutSubmitButton
+    //org.openqa.selenium.NoSuchElementException: 
+    //no such element: Unable to locate element: 
+    //{"method":"id","selector":"submit"}
 
 }
 ```
@@ -2365,44 +2365,44 @@ public class WebDriverBasicsLocatorsWithTagTest extends AbstractChromeWebDriverT
   
   @Test
   public void getDetailsAboutLoginButton() {
-	  driver.get("http://localhost:8080/pages/login.html");
-	  WebElement linkElement = driver.findElement(By.tagName("a"));
-	  System.out.println(linkElement.getText());//Login
-	  System.out.println(linkElement.getAttribute("class"));//btn btn-lg btn-success btn-block
-	  System.out.println(linkElement.getAttribute("href"));//http://localhost:8080/pages/index.html
+      driver.get("http://localhost:8080/pages/login.html");
+      WebElement linkElement = driver.findElement(By.tagName("a"));
+      System.out.println(linkElement.getText());//Login
+      System.out.println(linkElement.getAttribute("class"));//btn btn-lg btn-success btn-block
+      System.out.println(linkElement.getAttribute("href"));//http://localhost:8080/pages/index.html
   }
   
   @Test
   public void getDetailsAboutInputTags_FindElementWillReturnFirstElement() {
-	  driver.get("http://localhost:8080/pages/login.html");
-	  WebElement linkElement = driver.findElement(By.tagName("input"));
-	  System.out.println(linkElement.getAttribute("class"));//form-control
-	  System.out.println(linkElement.getAttribute("placeholder"));//E-mail
+      driver.get("http://localhost:8080/pages/login.html");
+      WebElement linkElement = driver.findElement(By.tagName("input"));
+      System.out.println(linkElement.getAttribute("class"));//form-control
+      System.out.println(linkElement.getAttribute("placeholder"));//E-mail
   }
   
   @Test
   public void getDetailsAboutInputTags_FindAllElements() {
-	  driver.get("http://localhost:8080/pages/login.html");
-	  
-	  List<WebElement> elements = driver.findElements(By.tagName("input"));
-	  
-	  for(WebElement element:elements) {
-		  System.out.println(element.getAttribute("class"));
-		  System.out.println(element.getAttribute("placeholder"));
-	  }
+      driver.get("http://localhost:8080/pages/login.html");
+      
+      List<WebElement> elements = driver.findElements(By.tagName("input"));
+      
+      for(WebElement element:elements) {
+          System.out.println(element.getAttribute("class"));
+          System.out.println(element.getAttribute("placeholder"));
+      }
   }
   
   @Test
   public void getDetailsAboutInputTags_FindAllElements_Login() {
-	  driver.get("http://localhost:8080/login");
-	  
-	  List<WebElement> elements = driver.findElements(By.tagName("input"));
-	  
-	  for(WebElement element:elements) {
-		  System.out.println(element.getAttribute("type"));
-		  System.out.println(element.getAttribute("name"));
-		  sleep(3);
-	  }
+      driver.get("http://localhost:8080/login");
+      
+      List<WebElement> elements = driver.findElements(By.tagName("input"));
+      
+      for(WebElement element:elements) {
+          System.out.println(element.getAttribute("type"));
+          System.out.println(element.getAttribute("name"));
+          sleep(3);
+      }
   }
 }
 ```
@@ -2422,44 +2422,44 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class WebDriverBasicsLocatorsWithXPathSelectorTest extends AbstractChromeWebDriverTest{
-	
-	@Test
-	public void testXpathSelectorForaTableTd() {
-		driver.get("http://localhost:8080/pages/tables.html");
-		//$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
-		WebElement browserRow1 = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
-		assertEquals(browserRow1.getText(), "Firefox 1.0");		
-	}
-	
-//	$$("#dataTables-example > thead > tr > th:nth-child(2)")
-//	[th.sorting]0: th.sortinglength: 1__proto__: Array(0)
-//	$$("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1")
-//	[td.sorting_1]
-	
-	@Test
-	public void testXpathSelectorForSortingAndCheckingFirstRow() {
-		
-//		$x("//*[@id='dataTables-example']/thead/tr/th[2]")
-//		[th.sorting]0: th.sortinglength: 1__proto__: Array(0)
-//		$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
-//		[td]
-				
-		driver.get("http://localhost:8080/pages/tables.html");
-		
-		WebElement headerBrowser = driver.findElement
-				(By.xpath(
-				"//*[@id='dataTables-example']/thead/tr/th[2]"));
-		
-		headerBrowser.click();
+    
+    @Test
+    public void testXpathSelectorForaTableTd() {
+        driver.get("http://localhost:8080/pages/tables.html");
+        //$x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
+        WebElement browserRow1 = driver.findElement(By.xpath("//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
+        assertEquals(browserRow1.getText(), "Firefox 1.0");     
+    }
+    
+//  $$("#dataTables-example > thead > tr > th:nth-child(2)")
+//  [th.sorting]0: th.sortinglength: 1__proto__: Array(0)
+//  $$("#dataTables-example > tbody > tr.gradeU.odd > td.sorting_1")
+//  [td.sorting_1]
+    
+    @Test
+    public void testXpathSelectorForSortingAndCheckingFirstRow() {
+        
+//      $x("//*[@id='dataTables-example']/thead/tr/th[2]")
+//      [th.sorting]0: th.sortinglength: 1__proto__: Array(0)
+//      $x("//*[@id='dataTables-example']/tbody/tr[1]/td[2]")
+//      [td]
+                
+        driver.get("http://localhost:8080/pages/tables.html");
+        
+        WebElement headerBrowser = driver.findElement
+                (By.xpath(
+                "//*[@id='dataTables-example']/thead/tr/th[2]"));
+        
+        headerBrowser.click();
 
-		WebElement element = driver.findElement
-				(By.xpath(
-				"//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
+        WebElement element = driver.findElement
+                (By.xpath(
+                "//*[@id='dataTables-example']/tbody/tr[1]/td[2]"));
 
-		assertEquals(element.getText(), "All others");		
-	}
-	
-	
+        assertEquals(element.getText(), "All others");      
+    }
+    
+    
 }
 ```
 ---
@@ -2479,33 +2479,33 @@ public class FirstWebApplicationLoginTest extends AbstractChromeWebDriverTest{
   
   @Test
   public void login() {
-	  driver.get("http://localhost:8080/login");
-	  
-	  sleep(5);
-	  
-	  WebElement nameElement = driver.findElement(By.name("name"));
-	  nameElement.sendKeys("in28minutes");
-	  
-	  sleep(2);
-	  
-	  WebElement passwordElement = driver.findElement(By.id("password"));
-	  passwordElement.sendKeys("dummy");
-	  
-	  sleep(2);
-	  
-	  WebElement submitElement = driver.findElement(By.id("submit"));
-	  submitElement.click();
-	  
-	  sleep(2);
-	  
-	  WebElement welcomeMessageElement = 
-			  driver.findElement(By.id("welcome-message"));
-	  
-	  
-	  
-	  //Welcome in28minutes!! Click here to manage your todo's.
-	  System.out.println(welcomeMessageElement.getText());
-	  
+      driver.get("http://localhost:8080/login");
+      
+      sleep(5);
+      
+      WebElement nameElement = driver.findElement(By.name("name"));
+      nameElement.sendKeys("in28minutes");
+      
+      sleep(2);
+      
+      WebElement passwordElement = driver.findElement(By.id("password"));
+      passwordElement.sendKeys("dummy");
+      
+      sleep(2);
+      
+      WebElement submitElement = driver.findElement(By.id("submit"));
+      submitElement.click();
+      
+      sleep(2);
+      
+      WebElement welcomeMessageElement = 
+              driver.findElement(By.id("welcome-message"));
+      
+      
+      
+      //Welcome in28minutes!! Click here to manage your todo's.
+      System.out.println(welcomeMessageElement.getText());
+      
   }
 }
 ```
@@ -2526,28 +2526,28 @@ public class StaticLoginTest extends AbstractChromeWebDriverTest{
   
   @Test
   public void login() {
-	  driver.get("http://localhost:8080/pages/login.html");
-	  
-	  sleep(5);
-	  
-	  WebElement emailElement = driver.findElement(By.name("email"));
-	  emailElement.sendKeys("in28minutes@gmail.com");
-	  
-	  sleep(2);
-	  
-	  WebElement passwordElement = driver.findElement(By.name("password"));
-	  passwordElement.sendKeys("dummy");
-	  
-	  sleep(2);
-	  
-	  WebElement loginElement = driver.findElement(By.tagName("a"));
-	  loginElement.click();
-	  
-	  sleep(2);
-	  
-	  //http://localhost:8080/pages/index.html
-	  System.out.println(driver.getCurrentUrl());
-	  
+      driver.get("http://localhost:8080/pages/login.html");
+      
+      sleep(5);
+      
+      WebElement emailElement = driver.findElement(By.name("email"));
+      emailElement.sendKeys("in28minutes@gmail.com");
+      
+      sleep(2);
+      
+      WebElement passwordElement = driver.findElement(By.name("password"));
+      passwordElement.sendKeys("dummy");
+      
+      sleep(2);
+      
+      WebElement loginElement = driver.findElement(By.tagName("a"));
+      loginElement.click();
+      
+      sleep(2);
+      
+      //http://localhost:8080/pages/index.html
+      System.out.println(driver.getCurrentUrl());
+      
   }
 }
 ```
@@ -2616,65 +2616,65 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class ActionsBasicTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testBasicActions() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement element = driver.findElement(By.id("textElement"));
-		WebElement tablesLink = driver.findElement(By.linkText("Tables"));
-		
-		//element.sendKeys("abc");
-		//tablesLink.click();
-		
-		Actions actions = new Actions(driver);
-		actions.sendKeys(element, "Dummy Text").perform();
-		sleep(5);
-		actions.click(tablesLink).perform();
-		sleep(5);
-		
-		
-	}
-	
-	@Test
-	public void testBasicActions_Combine() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement element = driver.findElement(By.id("textElement"));
-		WebElement tablesLink = driver.findElement(By.linkText("Tables"));
-		
-		Actions actions = new Actions(driver);
-		actions
-			.sendKeys(element, "Dummy Text")
-			.click(tablesLink)
-			.perform();
-		sleep(5);
-	}
+    @Test
+    public void testBasicActions() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement element = driver.findElement(By.id("textElement"));
+        WebElement tablesLink = driver.findElement(By.linkText("Tables"));
+        
+        //element.sendKeys("abc");
+        //tablesLink.click();
+        
+        Actions actions = new Actions(driver);
+        actions.sendKeys(element, "Dummy Text").perform();
+        sleep(5);
+        actions.click(tablesLink).perform();
+        sleep(5);
+        
+        
+    }
+    
+    @Test
+    public void testBasicActions_Combine() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement element = driver.findElement(By.id("textElement"));
+        WebElement tablesLink = driver.findElement(By.linkText("Tables"));
+        
+        Actions actions = new Actions(driver);
+        actions
+            .sendKeys(element, "Dummy Text")
+            .click(tablesLink)
+            .perform();
+        sleep(5);
+    }
 
-	@Test
-	public void testBasicDragAndDrop() {
-		driver.get("http://localhost:8080/pages/sortable.html");
-		WebElement htmlElement = driver.findElement(By.id("html"));
-		Actions actions = new Actions(driver);
-		actions
-			.dragAndDropBy(htmlElement, 50, 200)
-			.perform();
-		
-		sleep(5);
-	}
+    @Test
+    public void testBasicDragAndDrop() {
+        driver.get("http://localhost:8080/pages/sortable.html");
+        WebElement htmlElement = driver.findElement(By.id("html"));
+        Actions actions = new Actions(driver);
+        actions
+            .dragAndDropBy(htmlElement, 50, 200)
+            .perform();
+        
+        sleep(5);
+    }
 
 
-	@Test
-	public void testBasicDragAndDrop_Complicated() {
-		driver.get("http://localhost:8080/pages/sortable.html");
-		WebElement htmlElement = driver.findElement(By.id("html"));
-		
-		Actions actions = new Actions(driver);
-		actions
-			.clickAndHold(htmlElement)
-			.moveByOffset(50, 200)
-			.release()
-			.perform();
-		
-		sleep(5);
-	}
+    @Test
+    public void testBasicDragAndDrop_Complicated() {
+        driver.get("http://localhost:8080/pages/sortable.html");
+        WebElement htmlElement = driver.findElement(By.id("html"));
+        
+        Actions actions = new Actions(driver);
+        actions
+            .clickAndHold(htmlElement)
+            .moveByOffset(50, 200)
+            .release()
+            .perform();
+        
+        sleep(5);
+    }
 
 }
 ```
@@ -2695,70 +2695,70 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class CheckElementStylesTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void getCSSStylesForErrorElement() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement errorField = driver.findElement(By.id("inputError"));
+    @Test
+    public void getCSSStylesForErrorElement() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement errorField = driver.findElement(By.id("inputError"));
 
-		System.out.println(errorField.getCssValue("color"));// rgba(85, 85, 85, 1)
-		System.out.println(errorField.getCssValue("display"));// block
-		System.out.println(errorField.getCssValue("border-color"));// rgb(169, 68, 66)
-		System.out.println(errorField.getCssValue("height"));// 34px
-		System.out.println(errorField.getCssValue("font-size"));// 14px
-		System.out.println(errorField.getCssValue("background-color"));// rgba(255, 255, 255, 1)
-		System.out.println(errorField.getCssValue("border"));// 1px solid rgb(169, 68, 66)
+        System.out.println(errorField.getCssValue("color"));// rgba(85, 85, 85, 1)
+        System.out.println(errorField.getCssValue("display"));// block
+        System.out.println(errorField.getCssValue("border-color"));// rgb(169, 68, 66)
+        System.out.println(errorField.getCssValue("height"));// 34px
+        System.out.println(errorField.getCssValue("font-size"));// 14px
+        System.out.println(errorField.getCssValue("background-color"));// rgba(255, 255, 255, 1)
+        System.out.println(errorField.getCssValue("border"));// 1px solid rgb(169, 68, 66)
 
-	}
+    }
 
-	@Test
-	public void getCSSStylesForSuccessElement() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		WebElement errorField = driver.findElement(By.id("inputSuccess"));
-		System.out.println(errorField.getCssValue("color"));// rgba(85, 85, 85, 1)
-		System.out.println(errorField.getCssValue("display"));// block
-		System.out.println(errorField.getCssValue("border-color"));// rgb(60, 118, 61)
-		System.out.println(errorField.getCssValue("height"));// 34px
-		System.out.println(errorField.getCssValue("font-size"));// 14px
-		System.out.println(errorField.getCssValue("background-color"));// rgba(255, 255, 255, 1)
-		System.out.println(errorField.getCssValue("border"));// 1px solid rgb(60, 118, 61)
-	}
+    @Test
+    public void getCSSStylesForSuccessElement() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        WebElement errorField = driver.findElement(By.id("inputSuccess"));
+        System.out.println(errorField.getCssValue("color"));// rgba(85, 85, 85, 1)
+        System.out.println(errorField.getCssValue("display"));// block
+        System.out.println(errorField.getCssValue("border-color"));// rgb(60, 118, 61)
+        System.out.println(errorField.getCssValue("height"));// 34px
+        System.out.println(errorField.getCssValue("font-size"));// 14px
+        System.out.println(errorField.getCssValue("background-color"));// rgba(255, 255, 255, 1)
+        System.out.println(errorField.getCssValue("border"));// 1px solid rgb(60, 118, 61)
+    }
 
-	@Test
-	public void checkIfAnElementIsEnabled() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		WebElement errorField = driver.findElement(By.id("disabledInput"));
-		
-		assertFalse(errorField.isEnabled());
-		System.out.println(errorField.isEnabled());//false
-		
-	}
-	
-	@Test
-	public void exploreWebElementInterface() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		WebElement errorField = driver.findElement(By.id("disabledInput"));
-		System.out.println(errorField.getAttribute("placeholder"));//Disabled input
-		
-		System.out.println(errorField.getLocation());//(740, 311)
-		System.out.println(errorField.getSize());//(414, 34)
-		
-		WebElement textElement = driver.findElement(By.id("textElement"));		
-		System.out.println(textElement.getLocation());//(297, 242)
-		System.out.println(textElement.getSize());//(414, 34)
+    @Test
+    public void checkIfAnElementIsEnabled() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        WebElement errorField = driver.findElement(By.id("disabledInput"));
+        
+        assertFalse(errorField.isEnabled());
+        System.out.println(errorField.isEnabled());//false
+        
+    }
+    
+    @Test
+    public void exploreWebElementInterface() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        WebElement errorField = driver.findElement(By.id("disabledInput"));
+        System.out.println(errorField.getAttribute("placeholder"));//Disabled input
+        
+        System.out.println(errorField.getLocation());//(740, 311)
+        System.out.println(errorField.getSize());//(414, 34)
+        
+        WebElement textElement = driver.findElement(By.id("textElement"));      
+        System.out.println(textElement.getLocation());//(297, 242)
+        System.out.println(textElement.getSize());//(414, 34)
 
-		WebElement textAreaElement = driver.findElement(By.id("textAreaElement"));		
-		System.out.println(textAreaElement.getLocation());//(297, 549)
-		System.out.println(textAreaElement.getSize());//(414, 74)
+        WebElement textAreaElement = driver.findElement(By.id("textAreaElement"));      
+        System.out.println(textAreaElement.getLocation());//(297, 549)
+        System.out.println(textAreaElement.getSize());//(414, 74)
 
-		WebElement inputWarning = driver.findElement(By.id("inputWarning"));		
-		System.out.println(inputWarning.getLocation());//(740, 666)
-		System.out.println(inputWarning.getSize());//(414, 34)
+        WebElement inputWarning = driver.findElement(By.id("inputWarning"));        
+        System.out.println(inputWarning.getLocation());//(740, 666)
+        System.out.println(inputWarning.getSize());//(414, 34)
 
-		//findElements, findElement
+        //findElements, findElement
 
-	}
+    }
 
 }
 ```
@@ -2776,29 +2776,29 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class FramesTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testFrames() {
-		driver.get("http://localhost:8080/pages/frames-example.html");
-		
-		driver.switchTo().frame(0);
-		
-		System.out.println(  
-				"0 - " + driver.findElement(By.tagName("h1")).getText()
-				);//0 - Frames Example Left
-		
-		//org.openqa.selenium.NoSuchFrameException: no such frame
-		//driver.switchTo().frame(1);
-		
-		driver.switchTo().parentFrame();
-		
-		driver.switchTo().frame(1);
-		
-		System.out.println(  
-				"1 - " + driver.findElement(By.tagName("h1")).getText()
-				);//1 - Frames Example Right
+    @Test
+    public void testFrames() {
+        driver.get("http://localhost:8080/pages/frames-example.html");
+        
+        driver.switchTo().frame(0);
+        
+        System.out.println(  
+                "0 - " + driver.findElement(By.tagName("h1")).getText()
+                );//0 - Frames Example Left
+        
+        //org.openqa.selenium.NoSuchFrameException: no such frame
+        //driver.switchTo().frame(1);
+        
+        driver.switchTo().parentFrame();
+        
+        driver.switchTo().frame(1);
+        
+        System.out.println(  
+                "1 - " + driver.findElement(By.tagName("h1")).getText()
+                );//1 - Frames Example Right
 
-		
-	}
+        
+    }
 }
 ```
 ---
@@ -2813,25 +2813,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class TableReader {
-	private WebDriver driver;
-	private String id;
-	private WebElement tbody;
+    private WebDriver driver;
+    private String id;
+    private WebElement tbody;
 
-	public TableReader(WebDriver driver, String id) {
-		this.driver = driver;
-		this.id = id;
-		tbody = driver.findElement(By.cssSelector("#"
-				+ id
-				+ " > tbody"));
-	}
+    public TableReader(WebDriver driver, String id) {
+        this.driver = driver;
+        this.id = id;
+        tbody = driver.findElement(By.cssSelector("#"
+                + id
+                + " > tbody"));
+    }
 
-	public String getData(int row, int col) {
-		return tbody.findElement(By.cssSelector("tr:nth-child("
-				+ row
-				+ ") > td:nth-child("
-				+ col
-				+ ")")).getText();
-	}
+    public String getData(int row, int col) {
+        return tbody.findElement(By.cssSelector("tr:nth-child("
+                + row
+                + ") > td:nth-child("
+                + col
+                + ")")).getText();
+    }
 
 }
 ```
@@ -2850,23 +2850,23 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class JavaScriptAlertTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testForAlert() {
-		driver.get("http://localhost:8080/pages/notifications.html");
-		driver.findElement(By.id("alertButton")).click();
+    @Test
+    public void testForAlert() {
+        driver.get("http://localhost:8080/pages/notifications.html");
+        driver.findElement(By.id("alertButton")).click();
 
-		//org.openqa.selenium.UnhandledAlertException: 
-		//unexpected alert open: {Alert text : Enter Something}
-		//driver.findElement(By.id("modalButton")).click();
-		
-		Alert alertQuestion = driver.switchTo().alert();
-		alertQuestion.sendKeys("Some Message");
-		alertQuestion.accept();
-		
-		Alert alertMessage = driver.switchTo().alert();
-		System.out.println(alertMessage.getText());
-		alertMessage.accept();		
-	}
+        //org.openqa.selenium.UnhandledAlertException: 
+        //unexpected alert open: {Alert text : Enter Something}
+        //driver.findElement(By.id("modalButton")).click();
+        
+        Alert alertQuestion = driver.switchTo().alert();
+        alertQuestion.sendKeys("Some Message");
+        alertQuestion.accept();
+        
+        Alert alertMessage = driver.switchTo().alert();
+        System.out.println(alertMessage.getText());
+        alertMessage.accept();      
+    }
 }
 ```
 ---
@@ -2883,87 +2883,87 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class NewWindowTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testForWindows() {
+    @Test
+    public void testForWindows() {
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		// 0 - [CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2]
-		System.out.println("0 - " + driver.getWindowHandles());
+        // 0 - [CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2]
+        System.out.println("0 - " + driver.getWindowHandles());
 
-		driver.findElement(By.id("newPageButton")).click();
-		// Window Handle
-		// 1 - CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2
-		System.out.println("1 - " + driver.getWindowHandle());
+        driver.findElement(By.id("newPageButton")).click();
+        // Window Handle
+        // 1 - CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2
+        System.out.println("1 - " + driver.getWindowHandle());
 
-		// 2 - [CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2,
-		// CDwindow-F3E3A57A563CF50F3A063A72C4B23768]
-		System.out.println("2 - " + driver.getWindowHandles());
+        // 2 - [CDwindow-C62544C6B928D4C97EE4F2E54D9B7FE2,
+        // CDwindow-F3E3A57A563CF50F3A063A72C4B23768]
+        System.out.println("2 - " + driver.getWindowHandles());
 
-	}
+    }
 
-	@Test
-	public void findWindowHandleOfSecondWindow() {
+    @Test
+    public void findWindowHandleOfSecondWindow() {
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		String firstWindowHandle = driver.getWindowHandle();
+        String firstWindowHandle = driver.getWindowHandle();
 
-		System.out.println(firstWindowHandle);
+        System.out.println(firstWindowHandle);
 
-		driver.findElement(By.id("newPageButton")).click();
+        driver.findElement(By.id("newPageButton")).click();
 
-		String secondWindowHandle = findSecondWindowHandle(firstWindowHandle);
+        String secondWindowHandle = findSecondWindowHandle(firstWindowHandle);
 
-		System.out.println(secondWindowHandle);
-	}
+        System.out.println(secondWindowHandle);
+    }
 
-	private String findSecondWindowHandle(String firstWindowHandle) {
-		for (String handle : driver.getWindowHandles()) {
-			if (!firstWindowHandle.equals(handle)) {
-				return handle;
-			}
-		}
-		return null;
-	}
+    private String findSecondWindowHandle(String firstWindowHandle) {
+        for (String handle : driver.getWindowHandles()) {
+            if (!firstWindowHandle.equals(handle)) {
+                return handle;
+            }
+        }
+        return null;
+    }
 
-	@Test
-	public void switchToSecondWindow() {
+    @Test
+    public void switchToSecondWindow() {
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		String firstWindowHandle = driver.getWindowHandle();
+        String firstWindowHandle = driver.getWindowHandle();
 
-		System.out.println(firstWindowHandle);
+        System.out.println(firstWindowHandle);
 
-		driver.findElement(By.id("newPageButton")).click();
+        driver.findElement(By.id("newPageButton")).click();
 
-		String secondWindowHandle = findSecondWindowHandle(firstWindowHandle);
+        String secondWindowHandle = findSecondWindowHandle(firstWindowHandle);
 
-		System.out.println(secondWindowHandle);
+        System.out.println(secondWindowHandle);
 
-		System.out.println(driver.findElement(By.tagName("h1")).getText());// Notifications
+        System.out.println(driver.findElement(By.tagName("h1")).getText());// Notifications
 
-		driver.switchTo().window(secondWindowHandle);
+        driver.switchTo().window(secondWindowHandle);
 
-		System.out.println(driver.findElement(By.tagName("h1")).getText());// Forms
+        System.out.println(driver.findElement(By.tagName("h1")).getText());// Forms
 
-		driver.switchTo().window(firstWindowHandle);
+        driver.switchTo().window(firstWindowHandle);
 
-		System.out.println(driver.findElement(By.tagName("h1")).getText());// Notifications
+        System.out.println(driver.findElement(By.tagName("h1")).getText());// Notifications
 
-		System.out.println(driver.getCurrentUrl());// http://localhost:8080/pages/notifications.html
+        System.out.println(driver.getCurrentUrl());// http://localhost:8080/pages/notifications.html
 
-		driver.close();
+        driver.close();
 
-		// org.openqa.selenium.NoSuchWindowException: no such window: target window
-		// already closed
-		// System.out.println(driver.getCurrentUrl());
+        // org.openqa.selenium.NoSuchWindowException: no such window: target window
+        // already closed
+        // System.out.println(driver.getCurrentUrl());
 
-		driver.switchTo().window(secondWindowHandle);
+        driver.switchTo().window(secondWindowHandle);
 
-		System.out.println(driver.getCurrentUrl());// http://localhost:8080/pages/forms.html
-	}
+        System.out.println(driver.getCurrentUrl());// http://localhost:8080/pages/forms.html
+    }
 }
 ```
 ---
@@ -2991,89 +2991,89 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PlayingWithModalWindowAndWaitsTest extends AbstractChromeWebDriverTest {
 
-	@Test(expectedExceptions = ElementNotVisibleException.class)
-	public void playingWithModalWindows_expectingAException() {
-		driver.get("http://localhost:8080/pages/notifications.html");
-		// Button id - modalButton
-		// Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
-		driver.findElement(By.id("modalButton")).click();
+    @Test(expectedExceptions = ElementNotVisibleException.class)
+    public void playingWithModalWindows_expectingAException() {
+        driver.get("http://localhost:8080/pages/notifications.html");
+        // Button id - modalButton
+        // Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
+        driver.findElement(By.id("modalButton")).click();
 
-		// org.openqa.selenium.ElementNotVisibleException: element not visible
-		driver.findElement(By.id("myModalCloseButton")).click();
+        // org.openqa.selenium.ElementNotVisibleException: element not visible
+        driver.findElement(By.id("myModalCloseButton")).click();
 
-	}
+    }
 
-	@Test
-	public void playingWithModalWindows_FixingWithSleep() {
+    @Test
+    public void playingWithModalWindows_FixingWithSleep() {
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		// Button id - modalButton
-		// Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
-		driver.findElement(By.id("modalButton")).click();
+        // Button id - modalButton
+        // Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
+        driver.findElement(By.id("modalButton")).click();
 
-		sleep(1);
+        sleep(1);
 
-		System.out.println(driver.findElement(By.id("myModalLabel")).getText());// Modal title
+        System.out.println(driver.findElement(By.id("myModalLabel")).getText());// Modal title
 
-		driver.findElement(By.id("myModalCloseButton")).click();
+        driver.findElement(By.id("myModalCloseButton")).click();
 
-		// sleep(10);
-	}
+        // sleep(10);
+    }
 
-	@Test
-	@Ignore("implicit wait fails on Chrome")
-	// https://github.com/SeleniumHQ/selenium-google-code-issue-archive/issues/711
-	public void playingWithModalWindows_implicitWait() {
+    @Test
+    @Ignore("implicit wait fails on Chrome")
+    // https://github.com/SeleniumHQ/selenium-google-code-issue-archive/issues/711
+    public void playingWithModalWindows_implicitWait() {
 
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		// Button id - modalButton
-		// Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
-		driver.findElement(By.id("modalButton")).click();
+        // Button id - modalButton
+        // Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
+        driver.findElement(By.id("modalButton")).click();
 
-		// sleep(1);
+        // sleep(1);
 
-		System.out.println(driver.findElement(By.id("myModalLabel")).getText());// Modal title
+        System.out.println(driver.findElement(By.id("myModalLabel")).getText());// Modal title
 
-		driver.findElement(By.id("myModalCloseButton")).click();
+        driver.findElement(By.id("myModalCloseButton")).click();
 
-		// sleep(10);
-	}
+        // sleep(10);
+    }
 
-	@Test
-	public void playingWithModalWindows_ExplicitWait() {
+    @Test
+    public void playingWithModalWindows_ExplicitWait() {
 
-		driver.get("http://localhost:8080/pages/notifications.html");
+        driver.get("http://localhost:8080/pages/notifications.html");
 
-		// Button id - modalButton
-		// Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
-		driver.findElement(By.id("modalButton")).click();
+        // Button id - modalButton
+        // Modal Wdw id - myModal, myModalLabel, myModalBody, myModalCloseButton
+        driver.findElement(By.id("modalButton")).click();
 
-		// sleep(10);
-		// Max - 10
-		// Wait for myModalLabel to load
+        // sleep(10);
+        // Max - 10
+        // Wait for myModalLabel to load
 
-		WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-		
-		webDriverWait.withMessage("Waited for 10 Seconds but still myModalLabel not available");
-		
-		WebElement modalLabel = 
-				webDriverWait.until(
-						ExpectedConditions.visibilityOf(
-								driver.findElement(By.id("myModalLabel"))
-								)
-						);// By.id("myModalLabel")
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+        
+        webDriverWait.withMessage("Waited for 10 Seconds but still myModalLabel not available");
+        
+        WebElement modalLabel = 
+                webDriverWait.until(
+                        ExpectedConditions.visibilityOf(
+                                driver.findElement(By.id("myModalLabel"))
+                                )
+                        );// By.id("myModalLabel")
 
 
-		System.out.println(modalLabel.getText());// Modal title
+        System.out.println(modalLabel.getText());// Modal title
 
-		driver.findElement(By.id("myModalCloseButton")).click();
+        driver.findElement(By.id("myModalCloseButton")).click();
 
-		// sleep(10);
-	}
+        // sleep(10);
+    }
 }
 ```
 ---
@@ -3092,49 +3092,49 @@ import org.testng.annotations.Test;
 import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class PlayingWithScreenWindowTest extends AbstractChromeWebDriverTest {
-	
-	@Test
-	public void playingWithWindows() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		
-		System.out.println(driver.manage().window().getPosition());//(22, 22)
-		System.out.println(driver.manage().window().getSize());//(1200, 752)
-		sleep(3);
-		//failed to change window state to normal, current state is maximized
-		driver.manage().window().setPosition(new Point(200,200));
-		sleep(3);
-		driver.manage().window().setSize(new Dimension(200,200));
-		sleep(3);
-		driver.manage().window().maximize();
-		sleep(3);
-		driver.manage().window().fullscreen();
-		sleep(3);
+    
+    @Test
+    public void playingWithWindows() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        
+        System.out.println(driver.manage().window().getPosition());//(22, 22)
+        System.out.println(driver.manage().window().getSize());//(1200, 752)
+        sleep(3);
+        //failed to change window state to normal, current state is maximized
+        driver.manage().window().setPosition(new Point(200,200));
+        sleep(3);
+        driver.manage().window().setSize(new Dimension(200,200));
+        sleep(3);
+        driver.manage().window().maximize();
+        sleep(3);
+        driver.manage().window().fullscreen();
+        sleep(3);
 
-	}
-	
-	@Test
-	public void backForwardAndNavigation() {
-		driver.get("http://localhost:8080/pages/forms.html");
-		sleep(3);
-		driver.get("http://localhost:8080/pages/tables.html");
-		sleep(3);
-		driver.get("http://localhost:8080/pages/login.html");
-		sleep(3);
-		driver.get("http://localhost:8080/pages/index.html");
-		sleep(3);
-		driver.navigate().back();
-		sleep(3);
-		driver.navigate().back();
-		sleep(3);
-		driver.navigate().back();
-		sleep(3);
-		driver.navigate().forward();
-		sleep(3);
-		driver.navigate().refresh();
-		sleep(3);
-		driver.navigate().back();
-		sleep(3);
-	}	
+    }
+    
+    @Test
+    public void backForwardAndNavigation() {
+        driver.get("http://localhost:8080/pages/forms.html");
+        sleep(3);
+        driver.get("http://localhost:8080/pages/tables.html");
+        sleep(3);
+        driver.get("http://localhost:8080/pages/login.html");
+        sleep(3);
+        driver.get("http://localhost:8080/pages/index.html");
+        sleep(3);
+        driver.navigate().back();
+        sleep(3);
+        driver.navigate().back();
+        sleep(3);
+        driver.navigate().back();
+        sleep(3);
+        driver.navigate().forward();
+        sleep(3);
+        driver.navigate().refresh();
+        sleep(3);
+        driver.navigate().back();
+        sleep(3);
+    }   
 }
 ```
 ---
@@ -3156,36 +3156,36 @@ import com.in28minutes.webdriver.scenarios.framework.TableReader;
 
 public class ReadTablesTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testReadingOfTables() throws IOException {
-		
-		driver.get("http://localhost:8080/pages/tables.html");
-		
-		TableReader reader = new TableReader(driver, "dataTables-example");
-		System.out.println(reader.getData(1,2));
-		System.out.println(reader.getData(2,2));
-		System.out.println(reader.getData(5,4));
-		System.out.println(reader.getData(6,3));
+    @Test
+    public void testReadingOfTables() throws IOException {
+        
+        driver.get("http://localhost:8080/pages/tables.html");
+        
+        TableReader reader = new TableReader(driver, "dataTables-example");
+        System.out.println(reader.getData(1,2));
+        System.out.println(reader.getData(2,2));
+        System.out.println(reader.getData(5,4));
+        System.out.println(reader.getData(6,3));
 
-		TableReader reader2 = new TableReader(driver, "dataTables-example-2");
-		System.out.println(reader2.getData(1, 2));
-		
-		//1,2
-		//2,3
-		//WebElement tbody = driver.findElement(By.cssSelector("#dataTables-example > tbody"));
-		
-		//String t12 = tbody.findElement(By.cssSelector("tr:nth-child(1) > td:nth-child(2)")).getText();
-		
-		//String t22 = tbody.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2)")).getText();
-		
-		//System.out.println(t12);
-		//System.out.println(t22);
-		
-		//#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)
-		//#dataTables-example > tbody > tr:nth-child(2) > td:nth-child(2)
-		//#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(3)
-		
-	}
+        TableReader reader2 = new TableReader(driver, "dataTables-example-2");
+        System.out.println(reader2.getData(1, 2));
+        
+        //1,2
+        //2,3
+        //WebElement tbody = driver.findElement(By.cssSelector("#dataTables-example > tbody"));
+        
+        //String t12 = tbody.findElement(By.cssSelector("tr:nth-child(1) > td:nth-child(2)")).getText();
+        
+        //String t22 = tbody.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2)")).getText();
+        
+        //System.out.println(t12);
+        //System.out.println(t22);
+        
+        //#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(2)
+        //#dataTables-example > tbody > tr:nth-child(2) > td:nth-child(2)
+        //#dataTables-example > tbody > tr:nth-child(1) > td:nth-child(3)
+        
+    }
 }
 ```
 ---
@@ -3204,31 +3204,31 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class RunJavaScriptTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testRunningOfJavaScript() throws IOException {
-		
-		driver.get("http://localhost:8080/pages/tables.html");
-		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		
-		String title = (String)js.executeScript("return document.title;");
-		
-		sleep(3);
-		
-		js.executeScript("window.scrollBy(0,200)");
-		
-		sleep(3);
-		
-		js.executeScript("window.scrollBy(0,200)");
-		
-		sleep(3);
-		
-		js.executeScript("window.scrollBy(0,200)");
+    @Test
+    public void testRunningOfJavaScript() throws IOException {
+        
+        driver.get("http://localhost:8080/pages/tables.html");
+        
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        
+        String title = (String)js.executeScript("return document.title;");
+        
+        sleep(3);
+        
+        js.executeScript("window.scrollBy(0,200)");
+        
+        sleep(3);
+        
+        js.executeScript("window.scrollBy(0,200)");
+        
+        sleep(3);
+        
+        js.executeScript("window.scrollBy(0,200)");
 
-		sleep(3);
-		System.out.println(title);
-		
-	}
+        sleep(3);
+        System.out.println(title);
+        
+    }
 }
 ```
 ---
@@ -3251,19 +3251,19 @@ import com.in28minutes.webdriver.basics.AbstractChromeWebDriverTest;
 
 public class TakesScreenshotTest extends AbstractChromeWebDriverTest {
 
-	@Test
-	public void testFrames() throws IOException {
-		
-		driver.get("http://localhost:8080/pages/frames-example.html");
-		
-		//Operations
-		
-		File screenshot = ((TakesScreenshot)driver)
-				.getScreenshotAs(OutputType.FILE);
+    @Test
+    public void testFrames() throws IOException {
+        
+        driver.get("http://localhost:8080/pages/frames-example.html");
+        
+        //Operations
+        
+        File screenshot = ((TakesScreenshot)driver)
+                .getScreenshotAs(OutputType.FILE);
 
-		FileUtils.copyFile(screenshot,
-				new File("./target/" + driver + "-screenshot.png"));
-	}
+        FileUtils.copyFile(screenshot,
+                new File("./target/" + driver + "-screenshot.png"));
+    }
 }
 ```
 ---
@@ -3285,110 +3285,110 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CrossBrowserBasicsTest {
-	@Test
-	public void chromeBrowser() {
-		// Chrome
+    @Test
+    public void chromeBrowser() {
+        // Chrome
 
-		// Chrome Web Driver EXE
-		WebDriverManager.chromedriver().setup();
+        // Chrome Web Driver EXE
+        WebDriverManager.chromedriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new ChromeDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new ChromeDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
-	
-	@Test
-	public void firefoxBrowser() {
-		// Firefox
+        driver.quit();
+    }
+    
+    @Test
+    public void firefoxBrowser() {
+        // Firefox
 
-		// Firefox Web Driver EXE
-		WebDriverManager.firefoxdriver().setup();
+        // Firefox Web Driver EXE
+        WebDriverManager.firefoxdriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new FirefoxDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new FirefoxDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	@Test
-	public void safariBrowser() {
-		// Safari
-		// Make sure you set Develop | Allow Remote Automation option from Safari's main
-		// menu
-		
-		// Could not create a session: You must enable the 'Allow Remote Automation'
-		// option in Safari's Develop menu to control Safari via WebDriver.
+    @Test
+    public void safariBrowser() {
+        // Safari
+        // Make sure you set Develop | Allow Remote Automation option from Safari's main
+        // menu
+        
+        // Could not create a session: You must enable the 'Allow Remote Automation'
+        // option in Safari's Develop menu to control Safari via WebDriver.
 
-		// Safari Web Driver EXE
-		//WebDriverManager.safaridriver().setup();
+        // Safari Web Driver EXE
+        //WebDriverManager.safaridriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new SafariDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new SafariDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
-	
-	@Test
-	@Ignore
-	public void ieBrowser() {
-		
-		WebDriverManager.iedriver().setup();
+        driver.quit();
+    }
+    
+    @Test
+    @Ignore
+    public void ieBrowser() {
+        
+        WebDriverManager.iedriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new InternetExplorerDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new InternetExplorerDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
 
-	@Test
-	@Ignore
-	public void edgeBrowser() {
-		
-		WebDriverManager.edgedriver().setup();
+    @Test
+    @Ignore
+    public void edgeBrowser() {
+        
+        WebDriverManager.edgedriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new EdgeDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new EdgeDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	private void sleep(int i) {
-		
-		try {
-			Thread.sleep(i * 1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    private void sleep(int i) {
+        
+        try {
+            Thread.sleep(i * 1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-	}
+    }
 }
 ```
 ---
@@ -3410,41 +3410,41 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CrossBrowserFrameworkTest {
-	
-	WebDriver driver = null;
-	
-	@Parameters("browser")
-	@BeforeTest
-	public void before(@Optional("chrome") String browser) {
-		if(browser.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-		} else if(browser.equals("firefox")){
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else {
-			throw new RuntimeException("Does not support browser + " + browser);
-		}		
-	}
-		
-	@Test
-	public void launchTablesPage() {
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+    
+    WebDriver driver = null;
+    
+    @Parameters("browser")
+    @BeforeTest
+    public void before(@Optional("chrome") String browser) {
+        if(browser.equals("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        } else if(browser.equals("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else {
+            throw new RuntimeException("Does not support browser + " + browser);
+        }       
+    }
+        
+    @Test
+    public void launchTablesPage() {
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-	}
-	
-	@Test
-	public void launchIndexPage() {
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/index.html");
+    }
+    
+    @Test
+    public void launchIndexPage() {
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/index.html");
 
-	}
+    }
 
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -3466,111 +3466,111 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HeadlessBrowserBasicsTest {
 
-	@Test
-	public void chromeBrowser() {
-		// Chrome
+    @Test
+    public void chromeBrowser() {
+        // Chrome
 
-		// Chrome Web Driver EXE
-		WebDriverManager.chromedriver().setup();
+        // Chrome Web Driver EXE
+        WebDriverManager.chromedriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new ChromeDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new ChromeDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	@Test
-	public void chromeBrowserHeadlessBrowsing() {
-		// Chrome
+    @Test
+    public void chromeBrowserHeadlessBrowsing() {
+        // Chrome
 
-		// Chrome Web Driver EXE
-		WebDriverManager.chromedriver().setup();
+        // Chrome Web Driver EXE
+        WebDriverManager.chromedriver().setup();
 
-		ChromeOptions options = new ChromeOptions();
-		options.setHeadless(true);
-		
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new ChromeDriver(options);
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	@Test
-	public void firefoxBrowser() {
-		// Firefox
+    @Test
+    public void firefoxBrowser() {
+        // Firefox
 
-		// Firefox Web Driver EXE
-		WebDriverManager.firefoxdriver().setup();
+        // Firefox Web Driver EXE
+        WebDriverManager.firefoxdriver().setup();
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new FirefoxDriver();
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new FirefoxDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
-	
+        driver.quit();
+    }
+    
 
-	@Test
-	public void firefoxBrowserHeadlessBrowsing() {
-		// Firefox
+    @Test
+    public void firefoxBrowserHeadlessBrowsing() {
+        // Firefox
 
-		// Firefox Web Driver EXE
-		WebDriverManager.firefoxdriver().setup();
-		
-		FirefoxOptions options = new FirefoxOptions();
-		options.setHeadless(true);
+        // Firefox Web Driver EXE
+        WebDriverManager.firefoxdriver().setup();
+        
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
 
-		// WebDriver Interface - Create an instance of the web driver of the browser
-		WebDriver driver = new FirefoxDriver(options);
+        // WebDriver Interface - Create an instance of the web driver of the browser
+        WebDriver driver = new FirefoxDriver(options);
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	@Test
-	public void phanthomJS() {
-		WebDriverManager.phantomjs().setup();
+    @Test
+    public void phanthomJS() {
+        WebDriverManager.phantomjs().setup();
 
-		WebDriver driver = new PhantomJSDriver();
+        WebDriver driver = new PhantomJSDriver();
 
-		// Launch a web page
-		driver.get("http://localhost:8080/pages/tables.html");
+        // Launch a web page
+        driver.get("http://localhost:8080/pages/tables.html");
 
-		sleep(5);
+        sleep(5);
 
-		driver.quit();
-	}
-	
+        driver.quit();
+    }
+    
 
 
-	private void sleep(int i) {
-		
-		try {
-			Thread.sleep(i * 1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    private void sleep(int i) {
+        
+        try {
+            Thread.sleep(i * 1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-	}
+    }
 }
 ```
 ---
@@ -3589,7 +3589,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelReadUtil {
   public static String[][] readExcelInto2DArray(String excelFilePath, 
-		  String sheetName, int totalCols) {
+          String sheetName, int totalCols) {
 
     File file = new File(excelFilePath);
 
@@ -3609,7 +3609,7 @@ public class ExcelReadUtil {
       for (int i = 0; i < totalRows; i++) {
         for (int j = 0; j < totalCols; j++) {
           
-        	Cell cell = sheet.getRow(i).getCell(j);
+            Cell cell = sheet.getRow(i).getCell(j);
           //System.out.println(cell + " " + i + " " + j);
 
           if (cell == null)
@@ -3669,64 +3669,64 @@ import com.opencsv.CSVReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginDataProviderCompleteCsvTest {
-	
-	//Data Provider public java.util.List com.in28minutes.datadriventests.
-	//LoginDataProviderCompleteCsvTest.userIdsAndPasswordsCSVDataProvider() 
-	//must return either Object[][] or Object[] or Iterator<Object[]> 
-	//or Iterator<Object>, not interface java.util.List
+    
+    //Data Provider public java.util.List com.in28minutes.datadriventests.
+    //LoginDataProviderCompleteCsvTest.userIdsAndPasswordsCSVDataProvider() 
+    //must return either Object[][] or Object[] or Iterator<Object[]> 
+    //or Iterator<Object>, not interface java.util.List
 
-	// Create the Data Provider and give the data provider a name
-	@DataProvider(name = "user-ids-passwords-csv-data-provider")
-	public Iterator<String[]> userIdsAndPasswordsCSVDataProvider() {
-		return readFromCSVFile("./src/test/resources/login-data.csv").iterator();
-	}
+    // Create the Data Provider and give the data provider a name
+    @DataProvider(name = "user-ids-passwords-csv-data-provider")
+    public Iterator<String[]> userIdsAndPasswordsCSVDataProvider() {
+        return readFromCSVFile("./src/test/resources/login-data.csv").iterator();
+    }
 
-	// Use the data provider
-	@Test(dataProvider = "user-ids-passwords-csv-data-provider")
-	public void testLoginForAllScenarios(String userId, String password, String isLoginExpectedToBeSuccessfulString) {
-		
-		boolean isLoginExpectedToBeSuccessful = Boolean.valueOf(isLoginExpectedToBeSuccessfulString);
-		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys(userId);
-		// driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys(password);
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+    // Use the data provider
+    @Test(dataProvider = "user-ids-passwords-csv-data-provider")
+    public void testLoginForAllScenarios(String userId, String password, String isLoginExpectedToBeSuccessfulString) {
+        
+        boolean isLoginExpectedToBeSuccessful = Boolean.valueOf(isLoginExpectedToBeSuccessfulString);
+        
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys(userId);
+        // driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys(password);
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		if (isLoginExpectedToBeSuccessful) {
-			String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
-			assertTrue(welcomeMessageText.contains("Welcome " + userId));
-		} else {
-			String errorMessageText = driver.findElement(By.id("error-message")).getText();
-			assertEquals(errorMessageText, "Invalid Credentials");
-		}
+        if (isLoginExpectedToBeSuccessful) {
+            String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
+            assertTrue(welcomeMessageText.contains("Welcome " + userId));
+        } else {
+            String errorMessageText = driver.findElement(By.id("error-message")).getText();
+            assertEquals(errorMessageText, "Invalid Credentials");
+        }
 
-		driver.quit();
-	}
+        driver.quit();
+    }
 
-	@Test
-	public void testReadingDataFromCSV() throws IOException {
-		List<String[]> data = readFromCSVFile("./src/test/resources/login-data.csv");
-		for (String[] row : data) {
-			System.out.println(Arrays.toString(row));
-		}
+    @Test
+    public void testReadingDataFromCSV() throws IOException {
+        List<String[]> data = readFromCSVFile("./src/test/resources/login-data.csv");
+        for (String[] row : data) {
+            System.out.println(Arrays.toString(row));
+        }
 
-	}
+    }
 
-	private List<String[]> readFromCSVFile(String csvFilePath) {
-		try {
-			CSVReader reader = new CSVReader(new FileReader(csvFilePath));
-			List<String[]> data = reader.readAll();
-			return data;
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		}
-	}
+    private List<String[]> readFromCSVFile(String csvFilePath) {
+        try {
+            CSVReader reader = new CSVReader(new FileReader(csvFilePath));
+            List<String[]> data = reader.readAll();
+            return data;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
 
 }
 ```
@@ -3752,52 +3752,52 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginDataProviderCompleteExcelTest {
-		
-	//Create the Data Provider and give the data provider a name
-	@DataProvider(name="user-ids-passwords-excel-data-provider")
-	public String[][] userIdsAndPasswordsDataProvider() {
-		return ExcelReadUtil.readExcelInto2DArray(
-				"./src/test/resources/login-data.xlsx", "Sheet1", 3);
-	}	
-	
-	//Use the data provider
-	@Test(dataProvider="user-ids-passwords-excel-data-provider")
-	public void testLoginForAllScenarios(String userId, 
-			String password, String isLoginExpectedToBeSuccessfulString) {
-		
-		boolean isLoginExpectedToBeSuccessful = 
-				Boolean.valueOf(isLoginExpectedToBeSuccessfulString);
-		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys(userId);
-		//driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys(password);
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+        
+    //Create the Data Provider and give the data provider a name
+    @DataProvider(name="user-ids-passwords-excel-data-provider")
+    public String[][] userIdsAndPasswordsDataProvider() {
+        return ExcelReadUtil.readExcelInto2DArray(
+                "./src/test/resources/login-data.xlsx", "Sheet1", 3);
+    }   
+    
+    //Use the data provider
+    @Test(dataProvider="user-ids-passwords-excel-data-provider")
+    public void testLoginForAllScenarios(String userId, 
+            String password, String isLoginExpectedToBeSuccessfulString) {
+        
+        boolean isLoginExpectedToBeSuccessful = 
+                Boolean.valueOf(isLoginExpectedToBeSuccessfulString);
+        
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys(userId);
+        //driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys(password);
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		if(isLoginExpectedToBeSuccessful) {
-			String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
-			assertTrue(welcomeMessageText.contains("Welcome " + userId));
-		} else {
-			String errorMessageText = driver.findElement(By.id("error-message")).getText();
-			assertEquals(errorMessageText,"Invalid Credentials");			
-		}
-		
-		driver.quit();
-	}
-	
-	@Test
-	public void readFromExcel() {
-		//[[in28minutes, dummy, true], [adam, adam, false], 
-		//[adam, adam@123, true], [eve, eve, false]]
-		String[][] data = ExcelReadUtil.readExcelInto2DArray(
-				"./src/test/resources/login-data.xlsx", "Sheet1", 3);
-		System.out.println(Arrays.deepToString(data));
-		
-	}
+        if(isLoginExpectedToBeSuccessful) {
+            String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
+            assertTrue(welcomeMessageText.contains("Welcome " + userId));
+        } else {
+            String errorMessageText = driver.findElement(By.id("error-message")).getText();
+            assertEquals(errorMessageText,"Invalid Credentials");           
+        }
+        
+        driver.quit();
+    }
+    
+    @Test
+    public void readFromExcel() {
+        //[[in28minutes, dummy, true], [adam, adam, false], 
+        //[adam, adam@123, true], [eve, eve, false]]
+        String[][] data = ExcelReadUtil.readExcelInto2DArray(
+                "./src/test/resources/login-data.xlsx", "Sheet1", 3);
+        System.out.println(Arrays.deepToString(data));
+        
+    }
 }
 ```
 ---
@@ -3820,43 +3820,43 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginDataProviderCompleteTest {
-		
-	//Create the Data Provider and give the data provider a name
-	@DataProvider(name="user-ids-passwords-data-provider")
-	public Object[][] userIdsAndPasswordsDataProvider() {
-		return new Object[][]{
-				{"in28minutes","dummy", true},
-				{"adam","adam", false},
-				{"adam","adam@123", true},
-				{"eve","eve",false},
-				{"eve","eve@123", true},
-			};
-	}	
-	
-	//Use the data provider
-	@Test(dataProvider="user-ids-passwords-data-provider")
-	public void testLoginForAllScenarios(String userId, 
-			String password, boolean isLoginExpectedToBeSuccessful) {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys(userId);
-		//driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys(password);
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+        
+    //Create the Data Provider and give the data provider a name
+    @DataProvider(name="user-ids-passwords-data-provider")
+    public Object[][] userIdsAndPasswordsDataProvider() {
+        return new Object[][]{
+                {"in28minutes","dummy", true},
+                {"adam","adam", false},
+                {"adam","adam@123", true},
+                {"eve","eve",false},
+                {"eve","eve@123", true},
+            };
+    }   
+    
+    //Use the data provider
+    @Test(dataProvider="user-ids-passwords-data-provider")
+    public void testLoginForAllScenarios(String userId, 
+            String password, boolean isLoginExpectedToBeSuccessful) {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys(userId);
+        //driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys(password);
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		if(isLoginExpectedToBeSuccessful) {
-			String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
-			assertTrue(welcomeMessageText.contains("Welcome " + userId));
-		} else {
-			String errorMessageText = driver.findElement(By.id("error-message")).getText();
-			assertEquals(errorMessageText,"Invalid Credentials");			
-		}
-		
-		driver.quit();
-	}
+        if(isLoginExpectedToBeSuccessful) {
+            String welcomeMessageText = driver.findElement(By.id("welcome-message")).getText();
+            assertTrue(welcomeMessageText.contains("Welcome " + userId));
+        } else {
+            String errorMessageText = driver.findElement(By.id("error-message")).getText();
+            assertEquals(errorMessageText,"Invalid Credentials");           
+        }
+        
+        driver.quit();
+    }
 }
 ```
 ---
@@ -3876,21 +3876,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SuccessfulLoginBasicTest {
 
-	@Test
-	public void testLoginWithIn28Minutes() {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys("dummy");
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+    @Test
+    public void testLoginWithIn28Minutes() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys("dummy");
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		// welcome-message
-		System.out.println(driver.findElement(By.id("welcome-message")).getText());
-		driver.quit();
-	}
+        // welcome-message
+        System.out.println(driver.findElement(By.id("welcome-message")).getText());
+        driver.quit();
+    }
 }
 ```
 ---
@@ -3912,23 +3912,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UnSuccessfulLoginBasicTest {
 
-	@Test
-	public void testUnsuccessfulLoginWithIn28Minutes() {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys("");
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+    @Test
+    public void testUnsuccessfulLoginWithIn28Minutes() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys("");
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		// welcome-message
-		String errorMessageText = driver.findElement(By.id("error-message")).getText();
-		System.out.println(errorMessageText);
-		assertEquals(errorMessageText,"Invalid Credentials");
-		driver.quit();
-	}
+        // welcome-message
+        String errorMessageText = driver.findElement(By.id("error-message")).getText();
+        System.out.println(errorMessageText);
+        assertEquals(errorMessageText,"Invalid Credentials");
+        driver.quit();
+    }
 }
 ```
 ---
@@ -3950,32 +3950,32 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UnSuccessfulLoginDataDrivenBasicTest {
-		
-	//Create the Data Provider and give the data provider a name
-	@DataProvider(name="user-ids-data-provider")
-	public String[] userIdsDataProvider() {
-		return new String[]{"in28minutes","adam","eve"};
-	}	
-	
-	//Use the data provider
-	@Test(dataProvider="user-ids-data-provider")
-	public void testUnsuccessfulLoginWithIn28Minutes(String userId) {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys(userId);
-		//driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys("");
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+        
+    //Create the Data Provider and give the data provider a name
+    @DataProvider(name="user-ids-data-provider")
+    public String[] userIdsDataProvider() {
+        return new String[]{"in28minutes","adam","eve"};
+    }   
+    
+    //Use the data provider
+    @Test(dataProvider="user-ids-data-provider")
+    public void testUnsuccessfulLoginWithIn28Minutes(String userId) {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys(userId);
+        //driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys("");
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		// welcome-message
-		String errorMessageText = driver.findElement(By.id("error-message")).getText();
-		System.out.println(errorMessageText);
-		assertEquals(errorMessageText,"Invalid Credentials");
-		driver.quit();
-	}
+        // welcome-message
+        String errorMessageText = driver.findElement(By.id("error-message")).getText();
+        System.out.println(errorMessageText);
+        assertEquals(errorMessageText,"Invalid Credentials");
+        driver.quit();
+    }
 }
 ```
 ---
@@ -3997,36 +3997,36 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UnSuccessfulLoginDataDrivenLevel1Test {
-		
-	//Create the Data Provider and give the data provider a name
-	@DataProvider(name="user-ids-passwords-data-provider")
-	public String[][] userIdsAndPasswordsDataProvider() {
-		return new String[][]{
-				{"in28minutes","in28minutes"},
-				{"adam","adam"},
-				{"eve","eve"},
-			};
-	}	
-	
-	//Use the data provider
-	@Test(dataProvider="user-ids-passwords-data-provider")
-	public void testUnsuccessfulLoginWithIn28Minutes(String userId, String password) {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/login");
-		driver.findElement(By.id("name")).sendKeys(userId);
-		//driver.findElement(By.id("name")).sendKeys("in28minutes");
-		WebElement passwordElement = driver.findElement(By.id("password"));
-		passwordElement.sendKeys(password);
-		passwordElement.submit();
-		// driver.findElement(By.id("submit")).click();
+        
+    //Create the Data Provider and give the data provider a name
+    @DataProvider(name="user-ids-passwords-data-provider")
+    public String[][] userIdsAndPasswordsDataProvider() {
+        return new String[][]{
+                {"in28minutes","in28minutes"},
+                {"adam","adam"},
+                {"eve","eve"},
+            };
+    }   
+    
+    //Use the data provider
+    @Test(dataProvider="user-ids-passwords-data-provider")
+    public void testUnsuccessfulLoginWithIn28Minutes(String userId, String password) {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/login");
+        driver.findElement(By.id("name")).sendKeys(userId);
+        //driver.findElement(By.id("name")).sendKeys("in28minutes");
+        WebElement passwordElement = driver.findElement(By.id("password"));
+        passwordElement.sendKeys(password);
+        passwordElement.submit();
+        // driver.findElement(By.id("submit")).click();
 
-		// welcome-message
-		String errorMessageText = driver.findElement(By.id("error-message")).getText();
-		System.out.println(errorMessageText);
-		assertEquals(errorMessageText,"Invalid Credentials");
-		driver.quit();
-	}
+        // welcome-message
+        String errorMessageText = driver.findElement(By.id("error-message")).getText();
+        System.out.println(errorMessageText);
+        assertEquals(errorMessageText,"Invalid Credentials");
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4043,39 +4043,6 @@ in28minutes,eve@123,false
 ```
 ---
 
-### /web-driver-4-data-driven-tests/src/test/resources/login-data.xlsx
-
-```
-PK  �(M               xl/drawings/drawing1.xml��QN�0�p�*�kZhT��Rq8�I�6Z�Tvƺ��$x}�,���
-����kU��Л`��j����٪L"xC�X��:��v���,
-g��K��Z�1���bz$�<��Ӷ
-L�ȝ��$Ӡ��I��Vz���u�`�F��rS�ж�`̉��a �.�w�,�Y��������	m�M�k��HB�08�忑G����!��>��Mr�TȻ\�|}�0���X)��PK�K\��   {  PK  �(M               xl/worksheets/sheet1.xml���n�0E�`��=� ����������ώ1�
-��m �����Rx��;�^�#ҧ����iÕ�����$U��}�~]= �X"R+�2td=�?�^齩� ��Pem�`lh�1�j��/�҂X��6�f��D�� �ǂp�N�D/a��䔽(�
-&�	�YM,�7o�7Mf8��VF�֧JL$H@1;P6z�$�D��}۬ �@�-��=����P�e21V.�Г�҉�[|X��r�.�?^��`9�PG�0��w�����T���}hϴn���j�g�m*|�]e��S�����zs�����*�6��Eӹ�u|%𤭱J����y+I[ۍ����VP��8r�O�;���n���bI�j�{z��)��hF.4�vy��"�I�<W�/�s��J���ن�6�A�+ۛ�M8�
-�o9���\]�FKO;�x��lo*6����w.4��7��Ð��b=Ι���� PK6����  =  PK  �(M            #   xl/worksheets/_rels/sheet1.xml.rels��K
-�0�x�0{�օ�4�F�n�`H�l$��ۛ�������|�_53��89+��0������q�Z���$a�M��N4c�7q�|d�Q���H#w�lNz�<�AxTHl�b+§���Z-!���-���]�O�N]
-�����X&1�$p�ڽÒgD]����PK���M�   *  PK  �(M               xl/sharedStrings.xmlm�Qj�0��F䀘��2l�0�	��Xm��FrYo?�>����G��h6W\%��o:0�cI����_�;0��S���
-�ËQӦ,&���Z'�(�� ��TV���z����L�J��nk)f3���ݨ�/?������Î2WEqV��w~T�ݞ1�H�١ޞ��G�=~PKxg���     PK  �(M            
-   xl/styles.xml�T�n�0����{L�(�&��"��蕢(�_ ׉ԯ�R�j.Р@u���,w�*F�ɛQ9[��DZ�:e��on�P�ێkgeE'�C���0i�2H	l�� ���b��Ǎ��b�w�p@3X�A�.�MF�]Q�2Õ��~�~��
-�(\t=l�3������1.V$s
-�r�G����j�V0�UѺ읅H�;Z��nq�e�I޸�>�(V��iH8�m�b~��r#s�cP\'� �ZM��%
-:��l�Y���c�-j��漿dku�k��ٖ��̭��ro��J�K�'�~IJ��/RǞ䜧��xe�ē-K{4�Y
-�$kd�ɮ�e+��e�3�ݿ���K�I�]8�ռ9A�׽k�6N(�n�3����r���,c��r���ܕ�--<�B���m��}Nc�)i�J��9v�bv�I�=��_PK��`��  Y  PK  �(M               xl/workbook.xml��Mn�0FO�; �'mU%(�MU)��R�8fV<6�8�ܾ�(V�c�<�o�o�&
-2�eb�\����q�L��|,6"��\��w��+���O�?�G��	�;�Dc�JI�T��58>)}@yN�� ��
- ��ϫ՛De���0����hx�����
-����T��F�84:x�e\j��
-��VC/��B=�U8_�#k�8k���0M&.��c1it5)�O�����u���cn��ΞI���YJO$����q������ �]ϧa�"9M�!s� �����ٚ׍���(����C�"�"GL�qP|r�VV�m��4�PK�l�b=  �  PK  �(M               xl/_rels/workbook.xml.rels���j�0��`�`t_�t0ƨ�K��e l%Mlci����R(c���d��>���}��+ec0�T5(
-6�1����;P,N1���v����&���~L�
-$�/��f�iF�b�P^��g���A'�GHo��V�5��:8��Pݒ�?�����}�/39�Y�����@b૯
-����E�=frO��q���_27��y��ȞH~E~F���4�2���PKiq�   5  PK  �(M               _rels/.rels��A�0�x�f�Rpa���1&l
-��C!@�i����R�����~���yb�a +��r`h�����= QZ-'�(`� u�)/8ɘnB?��b��>Fw�<�g2rhӦ#?˘Fo��j��.��ܿP}���|�`�����nPx"u���_�$Ko0
-X&�$?ވ�,����<X� PK�o� �   (  PK  �(M               [Content_Types].xml�S�N1��a�+j�r@u��# Q>�$�nԼ���'�m���R{���g�N2�n��V���P���
-��Ɔy->fσ;QC0�b�Zl��tr5�mRU�բeN�J�n�ɘ0����m��zsT7���10p�!&�Gl`�z؝wԵ�����ŗ*d�z�pg�۫?ԭ�923��]�C�Mt},PP�^�d�5�/��4V��z�K������\Ǽ���d~_H�Ʃo�T�������2�w��锗	��a2��)�=D���������{䒓/��`�oO�3��A_�m�PK�u��)  �  PK   �(M�K\��   {                   xl/drawings/drawing1.xmlPK   �(M6����  =               6  xl/worksheets/sheet1.xmlPK   �(M���M�   *  #             Q  xl/worksheets/_rels/sheet1.xml.relsPK   �(Mxg���                  U  xl/sharedStrings.xmlPK   �(M��`��  Y  
-             K  xl/styles.xmlPK   �(M�l�b=  �               J  xl/workbook.xmlPK   �(Miq�   5               �  xl/_rels/workbook.xml.relsPK   �(M�o� �   (               �	  _rels/.relsPK   �(M�u��)  �               �
-  [Content_Types].xmlPK    	 	 Y  ;    
-```
----
-
 ### /web-driver-5-page-object-model/src/test/java/com/in28minutes/pageobjects/updatetodo/ListTodoPage.java
 
 ```java
@@ -4085,31 +4052,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ListTodoPage {
-	
-	private WebDriver driver;
-	
-	public ListTodoPage(WebDriver driver) {
-		super();
-		this.driver = driver;
-	}
+    
+    private WebDriver driver;
+    
+    public ListTodoPage(WebDriver driver) {
+        super();
+        this.driver = driver;
+    }
 
-	//get description for id
-	//desc- + id
-	public String getDescription(String id) {
-		return driver.findElement(By.id("desc-" + id)).getText();
-	}
-	
-	//get target date for id
-	public String getTargetDate(String id) {
-		return driver.findElement(By.id("targetdate-" + id)).getText();
-	}
-	
-	//click update for a id
-	public void clickUpdateFor(String id) {
-		driver.findElement(By.id("update-" + id)).click();
-	}
-	
-	//delete a id
+    //get description for id
+    //desc- + id
+    public String getDescription(String id) {
+        return driver.findElement(By.id("desc-" + id)).getText();
+    }
+    
+    //get target date for id
+    public String getTargetDate(String id) {
+        return driver.findElement(By.id("targetdate-" + id)).getText();
+    }
+    
+    //click update for a id
+    public void clickUpdateFor(String id) {
+        driver.findElement(By.id("update-" + id)).click();
+    }
+    
+    //delete a id
 
 }
 ```
@@ -4125,47 +4092,47 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
-	
-	private WebDriver driver;
-	
-	public LoginPage(WebDriver driver) {
-		super();
-		driver.get("http://localhost:8080/login");
-		this.driver = driver;
-	}
+    
+    private WebDriver driver;
+    
+    public LoginPage(WebDriver driver) {
+        super();
+        driver.get("http://localhost:8080/login");
+        this.driver = driver;
+    }
 
-	//Name Text Box
-	@FindBy(id="name")
-	WebElement name;
-	
-	//Password Text Box
-	@FindBy(id="password")
-	WebElement password;
-	
-	//Submit Button
-	@FindBy(id="submit")
-	WebElement submitButton;
-	
-	//enterName
-	public void enterName(String nameToEnter) {
-		name.sendKeys(nameToEnter);
-	}
+    //Name Text Box
+    @FindBy(id="name")
+    WebElement name;
+    
+    //Password Text Box
+    @FindBy(id="password")
+    WebElement password;
+    
+    //Submit Button
+    @FindBy(id="submit")
+    WebElement submitButton;
+    
+    //enterName
+    public void enterName(String nameToEnter) {
+        name.sendKeys(nameToEnter);
+    }
 
-	//enterPassword
-	public void enterPassword(String passwordToEnter) {
-		password.sendKeys(passwordToEnter);
-	}
+    //enterPassword
+    public void enterPassword(String passwordToEnter) {
+        password.sendKeys(passwordToEnter);
+    }
 
-	//submit
-	public void submit() {
-		submitButton.submit();
-	}
-	
-	public void login(String name, String password) {
-		enterName(name);
-		enterPassword(password);
-		submit();
-	}
+    //submit
+    public void submit() {
+        submitButton.submit();
+    }
+    
+    public void login(String name, String password) {
+        enterName(name);
+        enterPassword(password);
+        submit();
+    }
 }
 ```
 ---
@@ -4181,41 +4148,41 @@ import org.openqa.selenium.support.FindBy;
 
 public class TodoPage {
 
-	private WebDriver driver;
-	
-	public TodoPage(WebDriver driver) {
-		super();
-		this.driver = driver;
-	}
-	
-	@FindBy(id="desc")
-	private WebElement description;
-	
-	@FindBy(id="targetDate")
-	private WebElement targetDate;
-	
-	@FindBy(id="save")
-	private WebElement saveButton;
-	
-	public void enterDescription(String desc) {
-		description.clear();
-		description.sendKeys(desc);
-	}
-	
-	public void enterTargetDate(String date) {
-		targetDate.clear();
-		targetDate.sendKeys(date);
-	}
-	
-	public void submit() {
-		saveButton.submit();
-	}
-	
-	public void enterDetailsAndSubmit(String desc,String targetDate) {
-		enterDescription(desc);
-		enterTargetDate(targetDate);
-		submit();
-	}
+    private WebDriver driver;
+    
+    public TodoPage(WebDriver driver) {
+        super();
+        this.driver = driver;
+    }
+    
+    @FindBy(id="desc")
+    private WebElement description;
+    
+    @FindBy(id="targetDate")
+    private WebElement targetDate;
+    
+    @FindBy(id="save")
+    private WebElement saveButton;
+    
+    public void enterDescription(String desc) {
+        description.clear();
+        description.sendKeys(desc);
+    }
+    
+    public void enterTargetDate(String date) {
+        targetDate.clear();
+        targetDate.sendKeys(date);
+    }
+    
+    public void submit() {
+        saveButton.submit();
+    }
+    
+    public void enterDetailsAndSubmit(String desc,String targetDate) {
+        enterDescription(desc);
+        enterTargetDate(targetDate);
+        submit();
+    }
 }
 ```
 ---
@@ -4239,56 +4206,56 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UpdateTodoBasicTest {
-	
-	WebDriver driver;
-	
-	@BeforeTest
-	public void beforeTest() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	}
+    
+    WebDriver driver;
+    
+    @BeforeTest
+    public void beforeTest() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
-	@Test
-	public void loginPageObject() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		
-		//driver.findElement(By.id("name")).getAttribute("type")
-		System.out.println(page.name.getAttribute("type"));//text
-		
-		//driver.findElement(By.id("password")).getAttribute("type")
-		System.out.println(page.password.getAttribute("type"));//password
-		
-	}
-	
-	@Test
-	public void updateTodo() {		
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		page.login("in28minutes", "dummy");
-					
-		driver.findElement(By.linkText("Click here")).click();
-		
-		ListTodoPage listTodoPage = new ListTodoPage(driver);
-		listTodoPage.clickUpdateFor("10002");
-		
-		TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
-		todoPage.enterDescription("Become a Tech Guru - 2");
-		todoPage.enterTargetDate("12/09/2019");
-		todoPage.submit();
-		
-		assertEquals(listTodoPage.getDescription("10002"), 
-							"Become a Tech Guru - 2");
-		assertEquals(listTodoPage.getTargetDate("10002"), "12/09/2019");
-		
-	}
-	
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+    @Test
+    public void loginPageObject() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        
+        //driver.findElement(By.id("name")).getAttribute("type")
+        System.out.println(page.name.getAttribute("type"));//text
+        
+        //driver.findElement(By.id("password")).getAttribute("type")
+        System.out.println(page.password.getAttribute("type"));//password
+        
+    }
+    
+    @Test
+    public void updateTodo() {      
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        page.login("in28minutes", "dummy");
+                    
+        driver.findElement(By.linkText("Click here")).click();
+        
+        ListTodoPage listTodoPage = new ListTodoPage(driver);
+        listTodoPage.clickUpdateFor("10002");
+        
+        TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
+        todoPage.enterDescription("Become a Tech Guru - 2");
+        todoPage.enterTargetDate("12/09/2019");
+        todoPage.submit();
+        
+        assertEquals(listTodoPage.getDescription("10002"), 
+                            "Become a Tech Guru - 2");
+        assertEquals(listTodoPage.getTargetDate("10002"), "12/09/2019");
+        
+    }
+    
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4311,62 +4278,62 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UpdateTodoBasicTest1BeforePageObjects {
-	
-	WebDriver driver;
-	
-	@BeforeTest
-	public void beforeTest() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	}
+    
+    WebDriver driver;
+    
+    @BeforeTest
+    public void beforeTest() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
-	@Test
-	public void updateTodo() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		//		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+    @Test
+    public void updateTodo() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        //      LoginPage page = PageFactory.initElements(driver, LoginPage.class);
 
-		driver.findElement(By.id("name")).sendKeys("in28minutes");
-		driver.findElement(By.id("password")).sendKeys("dummy");
-		driver.findElement(By.id("submit")).submit();
-		
-		//Click here - Link Text - click
-		driver.findElement(By.linkText("Click here")).click();
-		
-		//id update-10002 click
-		driver.findElement(By.id("update-10002")).click();
-		
-		//id desc
-		WebElement desc = driver.findElement(By.id("desc"));
-		desc.clear();
-		desc.sendKeys("Become a Tech Guru - 2");
-		
-		//id targetDate
-		WebElement targetDate = driver.findElement(By.id("targetDate"));
-		targetDate.clear();
-		targetDate.sendKeys("12/09/2019");
-		
-		//save submit
-		driver.findElement(By.id("save")).submit();
-		
-		//check desc-10002
-		String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
-		//check targetdate-10002
-		String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
-		
-		//Become a Tech Guru - 2
-		//12/09/2019
+        driver.findElement(By.id("name")).sendKeys("in28minutes");
+        driver.findElement(By.id("password")).sendKeys("dummy");
+        driver.findElement(By.id("submit")).submit();
+        
+        //Click here - Link Text - click
+        driver.findElement(By.linkText("Click here")).click();
+        
+        //id update-10002 click
+        driver.findElement(By.id("update-10002")).click();
+        
+        //id desc
+        WebElement desc = driver.findElement(By.id("desc"));
+        desc.clear();
+        desc.sendKeys("Become a Tech Guru - 2");
+        
+        //id targetDate
+        WebElement targetDate = driver.findElement(By.id("targetDate"));
+        targetDate.clear();
+        targetDate.sendKeys("12/09/2019");
+        
+        //save submit
+        driver.findElement(By.id("save")).submit();
+        
+        //check desc-10002
+        String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
+        //check targetdate-10002
+        String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
+        
+        //Become a Tech Guru - 2
+        //12/09/2019
 
-		assertEquals(updatedDesc, "Become a Tech Guru - 2");
-		assertEquals(updatedTargetDate, "12/09/2019");
-		
-	}
-	
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+        assertEquals(updatedDesc, "Become a Tech Guru - 2");
+        assertEquals(updatedTargetDate, "12/09/2019");
+        
+    }
+    
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4390,82 +4357,82 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UpdateTodoBasicTest2AfterLoginPage {
-	
-	WebDriver driver;
-	
-	@BeforeTest
-	public void beforeTest() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	}
+    
+    WebDriver driver;
+    
+    @BeforeTest
+    public void beforeTest() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
-	@Test
-	public void loginPageObject() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		
-		//driver.findElement(By.id("name")).getAttribute("type")
-		System.out.println(page.name.getAttribute("type"));//text
-		
-		//driver.findElement(By.id("password")).getAttribute("type")
-		System.out.println(page.password.getAttribute("type"));//password
-		
-	}
-	
-	@Test
-	public void updateTodo() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		page.login("in28minutes", "dummy");
-			
-		//page.enterName("in28minutes");
-		//page.enterPassword("dummy");
-		//page.submit();
-		
-		//page.name.sendKeys("in28minutes");
-		//page.password.sendKeys("dummy");
-		//page.submitButton.submit();
-		
-		//Click here - Link Text - click
-		driver.findElement(By.linkText("Click here")).click();
-		
-		//id update-10002 click
-		driver.findElement(By.id("update-10002")).click();
-		
-		//id desc
-		WebElement desc = driver.findElement(By.id("desc"));
-		desc.clear();
-		desc.sendKeys("Become a Tech Guru - 2");
-		
-		//id targetDate
-		WebElement targetDate = driver.findElement(By.id("targetDate"));
-		targetDate.clear();
-		targetDate.sendKeys("12/09/2019");
-		
-		//save submit
-		driver.findElement(By.id("save")).submit();
-		
-		//check desc-10002
-		String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
-		//check targetdate-10002
-		String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
-		
-		//Become a Tech Guru - 2
-		//12/09/2019
+    @Test
+    public void loginPageObject() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        
+        //driver.findElement(By.id("name")).getAttribute("type")
+        System.out.println(page.name.getAttribute("type"));//text
+        
+        //driver.findElement(By.id("password")).getAttribute("type")
+        System.out.println(page.password.getAttribute("type"));//password
+        
+    }
+    
+    @Test
+    public void updateTodo() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        page.login("in28minutes", "dummy");
+            
+        //page.enterName("in28minutes");
+        //page.enterPassword("dummy");
+        //page.submit();
+        
+        //page.name.sendKeys("in28minutes");
+        //page.password.sendKeys("dummy");
+        //page.submitButton.submit();
+        
+        //Click here - Link Text - click
+        driver.findElement(By.linkText("Click here")).click();
+        
+        //id update-10002 click
+        driver.findElement(By.id("update-10002")).click();
+        
+        //id desc
+        WebElement desc = driver.findElement(By.id("desc"));
+        desc.clear();
+        desc.sendKeys("Become a Tech Guru - 2");
+        
+        //id targetDate
+        WebElement targetDate = driver.findElement(By.id("targetDate"));
+        targetDate.clear();
+        targetDate.sendKeys("12/09/2019");
+        
+        //save submit
+        driver.findElement(By.id("save")).submit();
+        
+        //check desc-10002
+        String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
+        //check targetdate-10002
+        String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
+        
+        //Become a Tech Guru - 2
+        //12/09/2019
 
-		assertEquals(updatedDesc, "Become a Tech Guru - 2");
-		assertEquals(updatedTargetDate, "12/09/2019");
-		
-	}
-	
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+        assertEquals(updatedDesc, "Become a Tech Guru - 2");
+        assertEquals(updatedTargetDate, "12/09/2019");
+        
+    }
+    
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4489,66 +4456,66 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UpdateTodoBasicTest3AfterListTodoPage {
-	
-	WebDriver driver;
-	
-	@BeforeTest
-	public void beforeTest() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	}
+    
+    WebDriver driver;
+    
+    @BeforeTest
+    public void beforeTest() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
-	@Test
-	public void loginPageObject() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		
-		//driver.findElement(By.id("name")).getAttribute("type")
-		System.out.println(page.name.getAttribute("type"));//text
-		
-		//driver.findElement(By.id("password")).getAttribute("type")
-		System.out.println(page.password.getAttribute("type"));//password
-		
-	}
-	
-	@Test
-	public void updateTodo() {
-		
-		driver.get("http://localhost:8080/login");
-		
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		page.login("in28minutes", "dummy");
-					
-		//Click here - Link Text - click
-		driver.findElement(By.linkText("Click here")).click();
-		
-		//id update-10002 click
-		driver.findElement(By.id("update-10002")).click();
-		
-		TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
-		todoPage.enterDescription("Become a Tech Guru - 2");
-		todoPage.enterTargetDate("12/09/2019");		
-		todoPage.submit();
-		
-		//check desc-10002
-		String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
-		//check targetdate-10002
-		String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
-		
-		//Become a Tech Guru - 2
-		//12/09/2019
+    @Test
+    public void loginPageObject() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        
+        //driver.findElement(By.id("name")).getAttribute("type")
+        System.out.println(page.name.getAttribute("type"));//text
+        
+        //driver.findElement(By.id("password")).getAttribute("type")
+        System.out.println(page.password.getAttribute("type"));//password
+        
+    }
+    
+    @Test
+    public void updateTodo() {
+        
+        driver.get("http://localhost:8080/login");
+        
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        page.login("in28minutes", "dummy");
+                    
+        //Click here - Link Text - click
+        driver.findElement(By.linkText("Click here")).click();
+        
+        //id update-10002 click
+        driver.findElement(By.id("update-10002")).click();
+        
+        TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
+        todoPage.enterDescription("Become a Tech Guru - 2");
+        todoPage.enterTargetDate("12/09/2019");     
+        todoPage.submit();
+        
+        //check desc-10002
+        String updatedDesc = driver.findElement(By.id("desc-10002")).getText();
+        //check targetdate-10002
+        String updatedTargetDate = driver.findElement(By.id("targetdate-10002")).getText();
+        
+        //Become a Tech Guru - 2
+        //12/09/2019
 
-		assertEquals(updatedDesc, "Become a Tech Guru - 2");
-		assertEquals(updatedTargetDate, "12/09/2019");
-		
-	}
-	
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+        assertEquals(updatedDesc, "Become a Tech Guru - 2");
+        assertEquals(updatedTargetDate, "12/09/2019");
+        
+    }
+    
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4571,50 +4538,50 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UpdateTodoBasicTest5AfterExercises {
 
-	WebDriver driver;
+    WebDriver driver;
 
-	@BeforeTest
-	public void beforeTest() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-	}
+    @BeforeTest
+    public void beforeTest() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
 
-	@Test
-	public void loginPageObject() {
+    @Test
+    public void loginPageObject() {
 
-		driver.get("http://localhost:8080/login");
+        driver.get("http://localhost:8080/login");
 
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
 
-		// driver.findElement(By.id("name")).getAttribute("type")
-		System.out.println(page.name.getAttribute("type"));// text
+        // driver.findElement(By.id("name")).getAttribute("type")
+        System.out.println(page.name.getAttribute("type"));// text
 
-		// driver.findElement(By.id("password")).getAttribute("type")
-		System.out.println(page.password.getAttribute("type"));// password
+        // driver.findElement(By.id("password")).getAttribute("type")
+        System.out.println(page.password.getAttribute("type"));// password
 
-	}
+    }
 
-	@Test
-	public void updateTodo() {
-		LoginPage page = PageFactory.initElements(driver, LoginPage.class);
-		page.login("in28minutes", "dummy");
+    @Test
+    public void updateTodo() {
+        LoginPage page = PageFactory.initElements(driver, LoginPage.class);
+        page.login("in28minutes", "dummy");
 
-		new WelcomePage(driver).clickTodosLink();
+        new WelcomePage(driver).clickTodosLink();
 
-		ListTodoPage listTodoPage = new ListTodoPage(driver);
-		listTodoPage.clickUpdateFor("10002");
+        ListTodoPage listTodoPage = new ListTodoPage(driver);
+        listTodoPage.clickUpdateFor("10002");
 
-		TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
-		todoPage.enterDetailsAndSubmit("Become a Tech Guru - 2", "12/09/2019");
+        TodoPage todoPage = PageFactory.initElements(driver, TodoPage.class);
+        todoPage.enterDetailsAndSubmit("Become a Tech Guru - 2", "12/09/2019");
 
-		assertEquals(listTodoPage.getDescription("10002"), "Become a Tech Guru - 2");
-		assertEquals(listTodoPage.getTargetDate("10002"), "12/09/2019");
-	}
+        assertEquals(listTodoPage.getDescription("10002"), "Become a Tech Guru - 2");
+        assertEquals(listTodoPage.getTargetDate("10002"), "12/09/2019");
+    }
 
-	@AfterTest
-	public void afterTest() {
-		driver.quit();
-	}
+    @AfterTest
+    public void afterTest() {
+        driver.quit();
+    }
 }
 ```
 ---
@@ -4628,17 +4595,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class WelcomePage {
-	
-	private WebDriver driver;
-	
-	public WelcomePage(WebDriver driver) {
-		super();
-		this.driver = driver;
-	}
+    
+    private WebDriver driver;
+    
+    public WelcomePage(WebDriver driver) {
+        super();
+        this.driver = driver;
+    }
 
-	public void clickTodosLink() {
-		driver.findElement(By.linkText("Click here")).click();
-	}
+    public void clickTodosLink() {
+        driver.findElement(By.linkText("Click here")).click();
+    }
 }
 ```
 ---
@@ -4661,65 +4628,65 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumHubTest {
-	//selenium-standalone start -- -role hub
+    //selenium-standalone start -- -role hub
 
-	//Nodes should register to http://192.168.8.69:4444/grid/register/
-	
-	//Clients should connect to http://192.168.8.69:4444/wd/hub
-	
-	//selenium-standalone start -- -role node -hub http://192.168.8.69:4444/grid/register/ 
-	
-	//selenium-standalone start -- -role node -port 5556 -hub http://192.168.8.69:4444/grid/register/ 
+    //Nodes should register to http://192.168.8.69:4444/grid/register/
+    
+    //Clients should connect to http://192.168.8.69:4444/wd/hub
+    
+    //selenium-standalone start -- -role node -hub http://192.168.8.69:4444/grid/register/ 
+    
+    //selenium-standalone start -- -role node -port 5556 -hub http://192.168.8.69:4444/grid/register/ 
 
-	@Test(threadPoolSize=2, invocationCount=4)
-	public void hub_chrome() throws MalformedURLException, InterruptedException {
-		
-		DesiredCapabilities capabilites = new DesiredCapabilities();
-		
-		//chrome, firefox, htmlunit, internet explorer, iphone, opera
-		capabilites.setBrowserName("chrome");
-		//capabilites.setPlatform(Platform.EL_CAPITAN);
-		
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
-		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://localhost:4444/wd/hub"), capabilites);
-		
-		//RemoteWebDriver
-		//	Location of Standaloneserver
-		//  Which Browser? Which OS? => Capabilities
-		
-		remoteDriver.get("http://localhost:8080/pages/index.html");
-		System.out.println(remoteDriver.getCurrentUrl());
-		System.out.println(remoteDriver.getTitle());
-		Thread.sleep(10000);
-		remoteDriver.quit();
-	}
+    @Test(threadPoolSize=2, invocationCount=4)
+    public void hub_chrome() throws MalformedURLException, InterruptedException {
+        
+        DesiredCapabilities capabilites = new DesiredCapabilities();
+        
+        //chrome, firefox, htmlunit, internet explorer, iphone, opera
+        capabilites.setBrowserName("chrome");
+        //capabilites.setPlatform(Platform.EL_CAPITAN);
+        
+        //WebDriverManager.chromedriver().setup();
+        //WebDriver driver = new ChromeDriver();
+        WebDriver remoteDriver = new RemoteWebDriver(
+                new URL("http://localhost:4444/wd/hub"), capabilites);
+        
+        //RemoteWebDriver
+        //  Location of Standaloneserver
+        //  Which Browser? Which OS? => Capabilities
+        
+        remoteDriver.get("http://localhost:8080/pages/index.html");
+        System.out.println(remoteDriver.getCurrentUrl());
+        System.out.println(remoteDriver.getTitle());
+        Thread.sleep(10000);
+        remoteDriver.quit();
+    }
 
-	@Test(threadPoolSize=2, invocationCount=4)
-	public void hub_firefox() throws MalformedURLException, InterruptedException {
-		
-		DesiredCapabilities capabilites = new DesiredCapabilities();
-		
-		//chrome, firefox, htmlunit, internet explorer, iphone, opera
-		capabilites.setBrowserName("firefox");
-		
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
-		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://localhost:4444/wd/hub"), capabilites);
-		
-		//RemoteWebDriver
-		//	Location of Standaloneserver
-		//  Which Browser? Which OS? => Capabilities
-		
-		remoteDriver.get("http://localhost:8080/pages/index.html");
-		System.out.println(remoteDriver.getCurrentUrl());
-		System.out.println(remoteDriver.getTitle());
-		Thread.sleep(10000);
-		remoteDriver.quit();
-	}
-	
+    @Test(threadPoolSize=2, invocationCount=4)
+    public void hub_firefox() throws MalformedURLException, InterruptedException {
+        
+        DesiredCapabilities capabilites = new DesiredCapabilities();
+        
+        //chrome, firefox, htmlunit, internet explorer, iphone, opera
+        capabilites.setBrowserName("firefox");
+        
+        //WebDriverManager.chromedriver().setup();
+        //WebDriver driver = new ChromeDriver();
+        WebDriver remoteDriver = new RemoteWebDriver(
+                new URL("http://localhost:4444/wd/hub"), capabilites);
+        
+        //RemoteWebDriver
+        //  Location of Standaloneserver
+        //  Which Browser? Which OS? => Capabilities
+        
+        remoteDriver.get("http://localhost:8080/pages/index.html");
+        System.out.println(remoteDriver.getCurrentUrl());
+        System.out.println(remoteDriver.getTitle());
+        Thread.sleep(10000);
+        remoteDriver.quit();
+    }
+    
 }
 ```
 ---
@@ -4741,41 +4708,41 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumStandAloneTest {
-	
-	@Test
-	public void basic() {
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:8080/pages/index.html");
-		System.out.println(driver.getCurrentUrl());
-		System.out.println(driver.getTitle());
-		driver.quit();
-	}
-	
-	@Test
-	public void standalone() throws MalformedURLException, InterruptedException {
-		
-		DesiredCapabilities capabilites = new DesiredCapabilities();
-		
-		//chrome, firefox, htmlunit, internet explorer, iphone, opera
-		capabilites.setBrowserName("chrome");
-		
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
-		WebDriver remoteDriver = new RemoteWebDriver(
-				new URL("http://localhost:4444/wd/hub"), capabilites);
-		
-		//RemoteWebDriver
-		//	Location of Standaloneserver
-		//  Which Browser? Which OS? => Capabilities
-		
-		remoteDriver.get("http://localhost:8080/pages/index.html");
-		System.out.println(remoteDriver.getCurrentUrl());
-		System.out.println(remoteDriver.getTitle());
-		Thread.sleep(15000);
-		remoteDriver.quit();
-	}
-	
+    
+    @Test
+    public void basic() {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8080/pages/index.html");
+        System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getTitle());
+        driver.quit();
+    }
+    
+    @Test
+    public void standalone() throws MalformedURLException, InterruptedException {
+        
+        DesiredCapabilities capabilites = new DesiredCapabilities();
+        
+        //chrome, firefox, htmlunit, internet explorer, iphone, opera
+        capabilites.setBrowserName("chrome");
+        
+        //WebDriverManager.chromedriver().setup();
+        //WebDriver driver = new ChromeDriver();
+        WebDriver remoteDriver = new RemoteWebDriver(
+                new URL("http://localhost:4444/wd/hub"), capabilites);
+        
+        //RemoteWebDriver
+        //  Location of Standaloneserver
+        //  Which Browser? Which OS? => Capabilities
+        
+        remoteDriver.get("http://localhost:8080/pages/index.html");
+        System.out.println(remoteDriver.getCurrentUrl());
+        System.out.println(remoteDriver.getTitle());
+        Thread.sleep(15000);
+        remoteDriver.quit();
+    }
+    
 }
 ```
 ---
