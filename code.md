@@ -1,7 +1,3 @@
-<!---
-Current Directory : /in28Minutes/git/automation-testing-java-and-selenium
--->
-
 ## Complete Code Example
 
 ### CSS Selectors from html css basics
