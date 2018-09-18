@@ -681,9 +681,9 @@ Ranga from in28Minutes
 ### Bonus Lectures
 
 ```
-Our Best Selling Courses
-Get unbelievable offers on all our best-selling courses!
-http://eepurl.com/bOJulL
+20+ Courses on Programming, Full Stack Development and Automation Testing. 200+ Youtube Videos on Programming, Design and Architecture.
+
+https://github.com/in28minutes/learn
 
 ```
 
@@ -1222,7 +1222,31 @@ public class FacebookLogin {
 ```
 
 
-### Examples for Future
+### Todo For Future
+
+#### Should You Automate?
+- Is Your Flow Changing?
+- Is Your UI Stable?
+- Do you have tight deadlines? 
+  - Building Good Automation Tests Needs Time
+
+#### Selenium History
+- 2004 - Jason Huggins at Thoughtworks created initial version of Selenium Core called Selenium RC (Selenium 1) - a very complicated Javascript framework, running in the Browser. However, since JavaScript is not considered secure - it had limitations.
+- 2006 - Simon Stewart at Google started with the idea of Web Driver 
+- 2008 - Decision to merge Selenium and Web Driver. It will be called Selenium 2.x. 
+
+#### Selenium History - 2
+
+- 2011 - Selenium 2 is out. Backward compatible with Selenium 1 (Selenium RC). Contained Web Driver APIs for Python, Ruby, Java and C#. 
+- 2016 - Selenium 3 is out. Backward compatible with WebDriver. Selenium RC is NOT supported. https://seleniumhq.wordpress.com/2016/10/13/selenium-3-0-out-now/
+
+
+#### Todo to Improve Course
+- Ctrl + Click to Open a Class 
+- sysout template expansion
+- Rerecord 
+  - Step 01 - Why should you learn HTML and CSS.mp4
+  - Step 02 - How does Web Work - Request, Response, HTML and Browser.mp4
 
 #### Text search with contains
 ```java
