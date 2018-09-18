@@ -13,12 +13,6 @@
   - [Find Us](#useful-links)
   - [Other Courses](#other-courses)
 
-## Overview
-- Tools : Maven, JUnit, TestNG (XML Test Suite, Groups, Listeners, Parallel, Multiple Browsers)
-- Concepts : HTML, DOM, XPath, Selenium Architecture, Reporting (HTML), Parallel Execution (Data Driven Tests, Browsers, Test Ng, Grid), Debugging (Screenshots/logs), Page Object Model, Data Driven(Excel), Keyword Driven, Record and Replay, Selenium Grid, Cross Browser Testing, DRY
-- Basics : Selenium IDE, Selenium Web Driver, Locating Web Elements(link text, name, id, xpath, css), Different Elements(select, radio, web tables, drag and drop, javascript alerts, windows, popups, iframes, switching windows, AJAX calls), Wait (Explicit(2types)/Implicit), JavaScript Executor Action Class, Mouse movement, Keyboard with Selenium, File Downloads)
-- Tips : Selenium Web Driver is an Interface, Test Retry, Headless Testing(PhantomJS, Chrome)
-
 ## Course Checklist
 
 ## Getting Started
@@ -373,53 +367,73 @@ public abstract class AbstractChromeWebDriverTest {
 
 Writing your first automation test is a lot of fun.
 
-Selenium can be used for screen scraping and automating repeated tasks on browser.
+Java is one of the most popular programming languages. Java offers both object oriented and functional programming features. Selenium can be used for screen scraping and automating repeated tasks on browser.
 
-Introduction to XYZ Framework..
+In this course, you will learn the basics of programming with Java and Automation Testing with Selenium. 
 
-In this course, you will learn the basics developing a Basic Todo Management Application using XYZ Framework.
+We take an hands-on approach using Eclipse as an IDE to illustrate more than 200 Java Coding Exercises, Puzzles and Code Examples. We will also write more than 100 Selenium automation tests with Java for a wide variety of scenarios.
 
-You will build the application step by step - in more than 25 steps. This course would be a perfect first step as an introduction to XYZ Framework.
+In more than 350 Steps, we explore the most important Java Programming Features and Selenium Automation Testing Scenarios
+- Basics of Java Programming - Expressions, Variables and Printing Output
+- Using Selenium IDE and Katalon Studio to Record and Replay Automation Testing Scenarios
+- Exporting Automation Tests and Setting up new Maven Project for JUnit and TestNG 
+- TestNG vs JUnit
+- TestNG Advanced Features - XML Suite, Test Reports, Running Tests with Parameters defined in XML and Running Tests in Parallel
+- Basics of HTML, CSS and XPath
+- Selenium Locators - By Id, By Name, By Link Text, By Partial Link Text, By Class, CSS Selectors and XPath Expressions
+- Setting and Reading values from Form Elements - Text, TextArea, CheckBox , Radio Button, Select Box and Multi Select Box
+- Advanced Selenium Automation Testing Scenarios - Playing with Windows, Modal Windows (Sleep, Implicit Wait and Explicit Waits), Alert Boxes, Window Handles and New Browser Window Launches, Frames, Taking Screenshots, Executing JavaScript Code, Actions Interface to control mouse and keyboard
+- Set up Automation Testing Frameworks - Tables
+- Important Interfaces - WebDriver
+- Introduction to Cross Browser Automation Testing, Headless Testing and Setting up a Basic Cross Browser Automation Testing Framework
+- Writing Data Driven Testing with Data Providers, CSV and Excel Spreadsheets
+- Implementing Page Object Model for a Complex Test Scenario
+- Scaling up with Selenium Standalone and Grid
+- Java Operators - Java Assignment Operator, Relational and Logical Operators, Short Circuit Operators
+- Java Conditionals and If Statement
+- Methods - Parameters, Arguments and Return Values
+- An Overview Of Java Platform - java, javac, bytecode, JVM and Platform Independence - JDK vs JRE vs JVM
+- Object Oriented Programming - Class, Object, State and Behavior
+- Basics of OOPS - Encapsulation, Abstraction, Inheritance and Polymorphism
+- Basics about Java Data Types - Casting, Operators and More
+- Java Built in Classes - BigDecimal, String, Java Wrapper Classes
+- Conditionals with Java - If Else Statement, Nested If Else, Java Switch Statement, Java Ternary Operator
+- Loops - For Loop, While Loop in Java, Do While Loop, Break and Continue
+- Java Array and ArrayList - Java String Arrays, Arrays of Objects, Primitive Data Types, toString and Exceptions
+- Java Collections - List Interface(ArrayList, LinkedList and Vector), Set Interface (HashSet, LinkedHashSet and TreeSet), Queue Interface (PriorityQueue) and Map Interface (HashMap, HashTable, LinkedHashMap and TreeMap() - Compare, Contrast and Choose
+- Generics - Why do we need Generics? Restrictions with extends and Generic Methods, WildCards - Upper Bound and Lower Bound.
+- Introduction to Exception Handling - Your Thought Process during Exception Handling. try, catch and finally. Exception Hierarchy - Checked Exceptions vs Unchecked Exceptions. Throwing an Exception. Creating and Throwing a Custom Exception - CurrenciesDoNotMatchException. Try with Resources - New Feature in Java 7.
 
-You will be using Spring (Dependency Management), Spring MVC, Spring Boot, Spring Security (Authentication and Authorization), BootStrap (Styling Pages), Maven (dependencies management), Eclipse (IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
+You will be using Eclipse and Brackets as the IDE. You will be using Maven, npm (Dependency Management), TestNG (XML Test Suite, Parallel, Multiple Browsers), JUnit, Selenium IDE, Katalon Studio, Selenium Standalone and Selenium Grid. We will help you set up each one of these.
+
+- Tools : Maven, JUnit, TestNG (XML Test Suite, Groups, Listeners, Parallel, Multiple Browsers), Selenium IDE, Katalon Studio, Brackets
+- Concepts : HTML, DOM, XPath, Selenium Architecture, Reporting (HTML), Parallel Execution (Data Driven Tests, Browsers, Test Ng, Grid), Debugging (Screenshots/logs), Page Object Model, Data Driven(Excel), Keyword Driven, Record and Replay, Selenium Grid, Cross Browser Testing, DRY
+- Basics : Selenium Web Driver, Locating Web Elements(link text, name, id, xpath, css), Different Elements(select, radio, web tables, drag and drop, javascript alerts, windows, popups, iframes, switching windows), Wait (Explicit/Implicit), JavaScript Executor Action Class, Mouse movement, Keyboard with Selenium)
+- Tips : Selenium Web Driver is an Interface, Headless Testing(PhantomJS, Chrome)
 
 ### What You will learn
-
-- You will learn to Topic No 1
-- You will understand about Topic No 1
-- You will develop a great application
-
-##### Examples
-
-- You will learn to design and develop SOAP and RESTful web services with Spring Boot
-- You will learn the magic of Spring Boot - Auto Configuration, Spring Initializr and Starter Projects
-- You will learn to connect web services to JPA/Hibernate with Spring Boot
-- You will understand how to implement Exception Handling, Validation, HATEOAS and filtering for RESTful Web Services.
-- You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, Spring Boot Web Services, Spring Boot Data JPA
-- You will learn how to version, monitor (Spring Boot Actuator) and document (Swagger) your RESTful Web Services with Spring Boot
-- You will understand the best practices in designing RESTful web services
-- You will understand about WSDL, SOAP Header, SOAP Body, SOAP Fault, XSD, JAXB and EndPoint
-- You will develop a Todo Management Application step by step with login and logout functionalities
-- You will learn to use an Annotation based approach - @RequestParam, @ModelAttribute, @SessionAttributes
-- You will understand the basics of developing a Web Application - POST, GET, HTTP, MVC Pattern
-- You will learn the basics of JSP, JSTL, EL, Spring Tag Libraries
-- You will learn some of the magic of Spring Boot
-- You will understand Spring MVC in depth - DispatcherServlet , Model, Controllers and ViewResolver
-- You will learn the magic of Spring Boot - Auto Configuration, Spring Initializr and Starter Projects
-- You will learn to develop RESTful web services with Spring Boot
-- You will learn to develop a Web Application connecting to JPA/Hibernate Step by Step with Spring MVC and Spring Boot
-- You will learn to use a wide variety of Spring Boot Starter Projects - Spring Boot Web, Spring Boot Test, Spring Boot Data JPA, Spring Boot Data REST
-- You will understand Spring MVC in depth - DispatcherServlet , Model, Controllers and ViewResolver
-- You will understand how to make best use of Spring Boot Actuator and Spring Boot Developer Tools
-- You will learn how to externalise application configuration using Spring Boot Profiles and Dynamic Configuration
-- You will understand and use the embedded servlet container options provided by Spring Boot - Tomcat, Jetty and Undertow
-- You will learn to write great Unit and Integration tests using Spring Boot Starter Test
+- You will learn how to think as a Java Programmer
+- You will learn how to start your journey as a Java Programmer
+- You will learn the basics of Eclipse IDE and JShell
+- You will learn to develop awesome object oriented programs with Java
+- You will learn to use Selenium IDE and Katalon Studio to Record and Replay Automation Testing Scenarios
+- You will learn to setup new automation projects with Selenium, Web Driver, JUnit and TestNG Frameworks
+- You will learn some of the TestNG Advanced Features - XML Suite, Test Reports, Test Parameters and Parallel Execution
+- You will learn the basics of HTML, CSS and XPath
+- You will understand all Selenium Locators - By Id, By Name, By Link Text, By Partial Link Text, By Class, CSS Selectors and XPath Expressions
+- You will learn to play with Form Elements - Text, TextArea, CheckBox , Radio Button, Select Box and Multi Select Box
+- You will learn to write automation test for wide range of scenarios - Playing with Windows, Modal Windows (Sleep, Implicit Wait and Explicit Waits), Alert Boxes, Window Handles and New Browser Window Launches, Frames, Taking Screenshots, Executing JavaScript Code, Actions Interface to control mouse and keyboard
+- You will learn to Set up Automation Testing Frameworks for Form Elements, Tables and Cross Browser Testing
+- You will learn to write Data Driven Tests with Data Providers, CSV and Excel Spreadsheets
+- You will learn to implement Page Object Model for a Complex Automation Test Scenario
+- You will learn to parallelize and scale up Automation Tests with Selenium Standalone and Grid
 
 
 ### Requirements
-- You should have working knowledge of Java and Annotations. 
-- We will help you install Eclipse and get up and running with Maven and Tomcat.
-
+- You should have the ability to learn while having fun!
+- Connectivity to Internet to download various tools needed.
+- We will help you install Selenium IDE, Katalon Studio, Brackets, Java, NodeJs and Eclipse.
+- We will help you download all needed dependencies using Maven and NPM
 
 ## Step Wise Details
 
@@ -1223,6 +1237,8 @@ public class FacebookLogin {
 
 
 ### Todo For Future
+
+- Test Retry
 
 #### Should You Automate?
 - Is Your Flow Changing?
