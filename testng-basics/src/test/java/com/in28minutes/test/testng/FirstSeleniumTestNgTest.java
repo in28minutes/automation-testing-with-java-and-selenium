@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
+
 public class FirstSeleniumTestNgTest {
 
 	WebDriver webDriver;
@@ -57,7 +59,7 @@ public class FirstSeleniumTestNgTest {
 
 		String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+		String expectedTitle = "Facebook log in or sign up";
 
 		// Check the output
 		assertEquals(expectedTitle, actualTitle);
@@ -72,7 +74,7 @@ public class FirstSeleniumTestNgTest {
 
 		String actualTitle = webDriver.getTitle();
 
-		String expectedTitle = "Facebook – log in or sign up";
+		String expectedTitle = "Facebook log in or sign up";
 
 		// Check the output
 		assertEquals(expectedTitle, actualTitle);
@@ -82,7 +84,7 @@ public class FirstSeleniumTestNgTest {
 	@AfterTest
 	public void after() {
 		System.out.println("I'm, Executed");
-		webDriver.quit();
+		//webDriver.quit();
 	}
 
 }
