@@ -41,6 +41,7 @@ public class FacebookLogin {
   public void tearDown() throws Exception {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
+    System.out.println(verificationErrorString);
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
     }
